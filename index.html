@@ -846,13 +846,13 @@ new Chart(ctxBounce, {
   data: {
     labels: [
       'Paid Social', 'Paid Video', 'Display',
-      'Direct', 'Paid Search', 'Referral',
-      'AI Assistant', 'Organic Social',
-      'Cross-network', 'Organic Search'
+      'Organic Social', 'Direct', 'Paid Search',
+      'Referral', 'Organic Search',
+      'AI Assistant', 'Cross-network'
     ],
     datasets: [{
       label: 'Tasa de Rebote (%)',
-      data: [88.46, 80, 64.32, 50.07, 45.55, 43.58, 37.21, 50.41, 19.44, 39.09],
+      data: [88.46, 80, 64.32, 50.41, 50.07, 45.55, 43.58, 39.09, 37.21, 19.44],
       backgroundColor: ctx => {
         const v = ctx.parsed.x;
         if (v >= 60) return '#D9766E';
@@ -1696,10 +1696,22 @@ showPage('imagenologia');
       <td style="text-align:right;padding:10px 12px;font-size:12.5px;font-weight:700;">$141.717</td>
       <td style="text-align:right;padding:10px 12px;font-size:12.5px;font-weight:700;color:#1a8c4e;">41</td>
       <td style="text-align:right;padding:10px 12px;font-size:12.5px;color:#555;">$3.426</td>
+    </tr>
+<tr style="border-bottom:1px solid #f0f2f8;">
+      <td style="padding:10px 12px;">
+        <strong style="font-size:12.5px;">Display Imagenología</strong>
+        <div style="margin-top:5px;"><span style="font-size:11px;color:#aaa;">Sin keywords (Display)</span></div>
+      </td>
+      <td style="text-align:right;padding:10px 12px;font-size:12.5px;">—</td>
+      <td style="text-align:right;padding:10px 12px;font-size:12.5px;font-weight:700;">—</td>
+      <td style="text-align:right;padding:10px 12px;font-size:12.5px;">—</td>
+      <td style="text-align:right;padding:10px 12px;font-size:12.5px;font-weight:700;">—</td>
+      <td style="text-align:right;padding:10px 12px;font-size:12.5px;font-weight:700;color:#888;">—</td>
+      <td style="text-align:right;padding:10px 12px;font-size:12.5px;color:#555;">—</td>
     </tr></tbody>
     <tfoot>
       <tr style="background:#EBF3FF;border-top:2px solid #1B4F8A;">
-        <td style="padding:10px 12px;font-size:12.5px;font-weight:700;color:#1a1a2e;">Total B2C</td>
+        <td style="padding:10px 12px;font-size:12.5px;font-weight:700;color:#1a1a2e;">Total B2C <span style="font-size:10px;font-weight:400;color:#888;">(excl. Display)</span></td>
         <td style="text-align:right;padding:10px 12px;font-size:12.5px;font-weight:700;">74.944</td>
         <td style="text-align:right;padding:10px 12px;font-size:12.5px;font-weight:700;">6.228</td>
         <td style="text-align:right;padding:10px 12px;font-size:12.5px;font-weight:700;">8,3%</td>
