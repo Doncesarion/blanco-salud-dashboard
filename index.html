@@ -534,7 +534,7 @@
      HEADER
 ══════════════════════════════════════════ -->
 
-<nav id="tab-nav" style="background:#0f2d5c;padding:0 40px;display:flex;align-items:center;gap:0;border-bottom:2px solid #1a3f7a;position:sticky;top:0;z-index:999;">
+<nav id="tab-nav" style="background:#0f2d5c;padding:0 40px;display:flex;flex-wrap:wrap;align-items:center;gap:0;border-bottom:2px solid #1a3f7a;position:sticky;top:0;z-index:999;">
   <button onclick="showPage('imagenologia')" id="tab-imagenologia"
     style="padding:13px 22px;border:none;background:transparent;color:rgba(255,255,255,0.6);font-size:13.5px;font-weight:600;cursor:pointer;border-bottom:3px solid transparent;margin-bottom:-2px;letter-spacing:0.2px;transition:all .2s;">
     Web Blanco Salud
@@ -560,6 +560,14 @@
     onmouseover="this.style.color='#fff'" onmouseout="if(this.id!==activeTab)this.style.color='rgba(255,255,255,0.6)'">
     Google Ads Agosto
   </button>
+  <div style="margin-left:auto;display:flex;align-items:center;gap:8px;padding:8px 0;">
+    <span style="font-size:12px;color:rgba(255,255,255,0.75);font-weight:600;">Mes:</span>
+    <select id="globalMonth" onchange="setMonth(this.value)" style="background:rgba(255,255,255,0.12);border:1px solid rgba(255,255,255,0.35);border-radius:6px;color:#fff;padding:6px 10px;font-size:12.5px;font-weight:600;cursor:pointer;">
+      <option value="nov" style="color:#1a1a2e;">Noviembre 2026 (1–17)</option>
+      <option value="oct" style="color:#1a1a2e;">Octubre 2026</option>
+      <option value="sep" style="color:#1a1a2e;">Septiembre 2026</option>
+    </select>
+  </div>
 </nav>
 
 <div id="page-imagenologia">
@@ -1317,8 +1325,7 @@ function changeMonth(m) {
   applyDateFilter();
 }
 
-// Activar tab inicial
-showPage('imagenologia');
+// (tab inicial lo activa el selector de mes)
 </script>
 
 
@@ -1335,14 +1342,6 @@ showPage('imagenologia');
   <div class="header-right">
     <div class="badge-period">1 – 30 Septiembre 2026</div>
     <div class="badge-source">Fuente: Google Ads</div>
-    <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;">
-      <span style="font-size:11px;color:rgba(255,255,255,0.7);font-weight:600;">Mes:</span>
-      <select id="monthSelector" onchange="changeMonth(this.value)"
-        style="background:rgba(255,255,255,0.15);border:1px solid rgba(255,255,255,0.3);
-               border-radius:6px;color:#fff;padding:4px 10px;font-size:12px;cursor:pointer;">
-        <option value="sep2026" selected>Septiembre 2026</option>
-      </select>
-    </div>
   </div>
 </header>
 
@@ -1936,6 +1935,1569 @@ showPage('imagenologia');
 </footer>
 
 </div><!-- /page-meta -->
+
+<div id="page-imagenologia-oct" class="month-page" style="display:none;">
+<header class="header">
+  <div class="header-left">
+    <div class="logo-box"><img data-logo src="" alt="Blanco Salud" style="height:52px;object-fit:contain;display:block;"></div>
+    <div style="display:flex;flex-direction:column;gap:3px;">
+      <h1 style="font-size:21px;font-weight:700;color:#fff;letter-spacing:-0.3px;margin:0;line-height:1.2;">Dashboard Digital</h1>
+      <p style="font-size:13px;color:rgba(255,255,255,0.72);margin:0;font-weight:400;letter-spacing:0.2px;">Principales métricas e indicadores</p>
+    </div>
+  </div>
+  <div class="header-right">
+    <div class="badge-period">1 – 31 Octubre 2026</div>
+    <div class="badge-source">Fuente: Google Analytics 4</div>
+  </div>
+</header>
+<div class="container">
+  <section>
+    <div class="section-title"><div class="icon">📊</div>Indicadores Clave — Octubre 2026</div>
+    <div class="kpi-grid">
+      <div class="kpi-card" style="--accent: var(--blue);">
+        <div class="kpi-icon" style="--icon-bg: #EBF3FF; color: var(--blue);">👥</div>
+        <div class="kpi-label">Sesiones Totales</div>
+        <div class="kpi-value">85.554</div>
+        <div class="kpi-sub">Visitas al sitio web</div>
+      </div>
+      <div class="kpi-card kpi-star">
+        <div class="kpi-icon" style="--icon-bg: #E8F8F1; color: var(--green);">✅</div>
+        <div class="kpi-label">Paso 8 — Confirmación</div>
+        <div class="kpi-value">5.679</div>
+        <div class="kpi-sub">confirmacion_paso8</div>
+      </div>
+      <div class="kpi-card" style="--accent: #F39C12;">
+        <div class="kpi-icon" style="--icon-bg: #FFF8E1; color: #F39C12;">💰</div>
+        <div class="kpi-label">Costo por Conv.</div>
+        <div class="kpi-value">$674</div>
+        <div class="kpi-sub">Google Ads · $3.829k ÷ 5.679 paso8</div>
+      </div>
+      <div class="kpi-card" style="--accent: #8B5CF6;">
+        <div class="kpi-icon" style="--icon-bg: #F3F0FF; color: #8B5CF6;">🎯</div>
+        <div class="kpi-label">Tasa de Conversión</div>
+        <div class="kpi-value">6,64%</div>
+        <div class="kpi-sub">Sesiones → Hora agendada</div>
+      </div>
+      <div class="kpi-card" style="--accent: var(--orange);">
+        <div class="kpi-icon" style="--icon-bg: #FFF3E0; color: var(--orange);">↩️</div>
+        <div class="kpi-label">Tasa de Rebote</div>
+        <div class="kpi-value">38,7%</div>
+        <div class="kpi-sub">Promedio ponderado</div>
+      </div>
+    </div>
+  </section>
+  <section>
+    <div class="section-title"><div class="icon">📡</div>Tráfico Pago vs Orgánico — Distribución de Canales</div>
+    <div class="two-col">
+      <div class="card">
+        <div class="chart-title">Sesiones por Tipo de Canal</div>
+        <div class="chart-wrap" style="max-width: 320px; margin: 0 auto;"><canvas id="chartDonutTrafico-oct" height="280"></canvas></div>
+        <div style="display:flex; flex-wrap:wrap; gap:8px 16px; margin-top:14px; justify-content:center;">
+          <span style="font-size:12px;"><span style="display:inline-block;width:10px;height:10px;border-radius:2px;background:#1B4F8A;margin-right:4px;"></span>Orgánico 57,4%</span>
+          <span style="font-size:12px;"><span style="display:inline-block;width:10px;height:10px;border-radius:2px;background:#00B4D8;margin-right:4px;"></span>Directo 14,4%</span>
+          <span style="font-size:12px;"><span style="display:inline-block;width:10px;height:10px;border-radius:2px;background:#F39C12;margin-right:4px;"></span>Pagado 23,6%</span>
+          <span style="font-size:12px;"><span style="display:inline-block;width:10px;height:10px;border-radius:2px;background:#8B5CF6;margin-right:4px;"></span>Referral 1,4%</span>
+          <span style="font-size:12px;"><span style="display:inline-block;width:10px;height:10px;border-radius:2px;background:#95A5A6;margin-right:4px;"></span>Otros 3,2%</span>
+          
+        </div>
+      </div>
+      <div class="card">
+        <div class="chart-title">Tasa de Rebote por Canal</div>
+        <canvas id="chartBounceCanal-oct" height="220"></canvas>
+      </div>
+    </div>
+  </section>
+  <section>
+    <div class="section-title"><div class="icon">🔽</div>Embudo de Agendamiento — Pasos del Proceso</div>
+    <div class="card">
+      <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px;">
+        <div><div class="funnel-grid" id="funnelContainer-oct"></div></div>
+        <div style="display:flex; flex-direction:column; justify-content:center;">
+          <div class="chart-title" style="margin-bottom:16px;">Usuarios por Etapa</div>
+          <canvas id="chartFunnel-oct" height="280"></canvas>
+        </div>
+      </div>
+      <div class="funnel-final-banner" style="margin-top:20px;">
+        <div class="funnel-final-icon">✅</div>
+        <div class="funnel-final-text">
+          <strong>2.083 pacientes agendaron</strong>
+          <span>Completaron el proceso online · Conversión embudo: 42,0% desde paso 2</span>
+        </div>
+      </div>
+      <div class="funnel-call-out">
+        <span>📞</span>
+        <span><strong>1.664 usuarios</strong> hicieron clic para llamar al call center (evento llamar_call_center) — canal alternativo de conversión</span>
+      </div>
+    </div>
+  </section>
+  <section>
+    <div class="section-title"><div class="icon">📍</div>Dispositivos y Distribución Geográfica</div>
+    <div class="three-col">
+      <div class="card">
+        <div class="chart-title">Usuarios por Dispositivo</div>
+        <div style="max-width: 280px; margin: 0 auto;"><canvas id="chartDevices-oct" height="240"></canvas></div>
+        <div style="margin-top:16px; display:flex; flex-direction:column; gap:8px;">
+          <div style="display:flex; align-items:center; gap:10px;">
+            <div style="width:12px;height:12px;border-radius:3px;background:#1B4F8A;flex-shrink:0;"></div>
+            <div style="flex:1; font-size:13px; font-weight:600;">Móvil</div>
+            <div style="font-size:13px; font-weight:700;">31.235 usuarios</div>
+            <div style="width:40px;text-align:right;font-size:12px;color:var(--muted);">65,6%</div>
+          </div>
+          <div style="display:flex; align-items:center; gap:10px;">
+            <div style="width:12px;height:12px;border-radius:3px;background:#00B4D8;flex-shrink:0;"></div>
+            <div style="flex:1; font-size:13px; font-weight:600;">Escritorio</div>
+            <div style="font-size:13px; font-weight:700;">16.027 usuarios</div>
+            <div style="width:40px;text-align:right;font-size:12px;color:var(--muted);">33,7%</div>
+          </div>
+          <div style="display:flex; align-items:center; gap:10px;">
+            <div style="width:12px;height:12px;border-radius:3px;background:#95A5A6;flex-shrink:0;"></div>
+            <div style="flex:1; font-size:13px; font-weight:600;">Tablet</div>
+            <div style="font-size:13px; font-weight:700;">320 usuarios</div>
+            <div style="width:40px;text-align:right;font-size:12px;color:var(--muted);">0,7%</div>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="chart-title">Top Regiones por Usuarios Activos</div>
+        <canvas id="chartRegiones-oct" height="240"></canvas>
+      </div>
+    </div>
+  </section>
+</div>
+<footer class="footer"><strong>Período:</strong> 1–31 Oct 2026 &nbsp;·&nbsp; <strong>Fuente:</strong> Google Analytics 4 &nbsp;·&nbsp; <strong>Blanco Salud</strong></footer>
+</div>
+<div id="page-ocupacional-oct" class="month-page" style="display:none;">
+<header class="header">
+  <div class="header-left">
+    <div class="logo-box"><img data-logo src="" alt="Blanco Salud" style="height:52px;object-fit:contain;display:block;"></div>
+    <div style="display:flex;flex-direction:column;gap:3px;">
+      <h1 style="font-size:21px;font-weight:700;color:#fff;letter-spacing:-0.3px;margin:0;line-height:1.2;">Dashboard Digital</h1>
+      <p style="font-size:13px;color:rgba(255,255,255,0.72);margin:0;font-weight:400;letter-spacing:0.2px;">Salud Ocupacional — Principales métricas e indicadores</p>
+    </div>
+  </div>
+  <div class="header-right">
+    <div class="badge-period">1 – 31 Octubre 2026</div>
+    <div class="badge-source">Fuente: Google Analytics 4</div>
+  </div>
+</header>
+<div style="max-width:1300px;margin:0 auto;padding:28px 32px;overflow-x:hidden;">
+  <div style="background:#EBF3FF;border-left:4px solid #1B4F8A;border-radius:8px;padding:12px 18px;margin-bottom:24px;font-size:13px;color:#1a3a6b;display:flex;align-items:center;gap:10px;">
+    <span style="font-size:16px;">💼</span>
+    <span><strong>Vista B2B — Empresas:</strong> Esta propiedad mide el sitio de Salud Ocupacional, orientado a captación de empresas. La conversión clave es el <strong>formulario de contacto</strong>, no el agendamiento online.</span>
+  </div>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:16px;margin-bottom:28px;">
+    <div style="background:#fff;border-radius:12px;padding:20px 18px;box-shadow:0 2px 12px rgba(0,0,0,.07);border-top:3px solid #1B4F8A;">
+      <div style="font-size:11px;font-weight:700;color:#888;text-transform:uppercase;letter-spacing:1px;margin-bottom:8px;">Sesiones</div>
+      <div style="font-size:30px;font-weight:800;color:#1a1a2e;letter-spacing:-1px;">1.931</div>
+      <div style="font-size:11px;color:#aaa;margin-top:4px;">1–31 Oct 2026</div>
+    </div>
+    <div style="background:#fff;border-radius:12px;padding:20px 18px;box-shadow:0 2px 12px rgba(0,0,0,.07);border-top:3px solid #00B4D8;">
+      <div style="font-size:11px;font-weight:700;color:#888;text-transform:uppercase;letter-spacing:1px;margin-bottom:8px;">Usuarios Activos</div>
+      <div style="font-size:30px;font-weight:800;color:#1a1a2e;letter-spacing:-1px;">1.614</div>
+      <div style="font-size:11px;color:#aaa;margin-top:4px;">usuarios únicos</div>
+    </div>
+    <div style="background:#fff;border-radius:12px;padding:20px 18px;box-shadow:0 2px 12px rgba(0,0,0,.07);border-top:3px solid #F39C12;">
+      <div style="font-size:11px;font-weight:700;color:#888;text-transform:uppercase;letter-spacing:1px;margin-bottom:8px;">Tasa de Rebote</div>
+      <div style="font-size:30px;font-weight:800;color:#c97a00;letter-spacing:-1px;">49,8%</div>
+      <div style="font-size:11px;color:#aaa;margin-top:4px;">promedio ponderado</div>
+    </div>
+    <div style="background:#fff;border-radius:12px;padding:20px 18px;box-shadow:0 2px 12px rgba(0,0,0,.07);border-top:3px solid #2ECC71;transform:scale(1.03);">
+      <div style="font-size:11px;font-weight:700;color:#1a8c4e;text-transform:uppercase;letter-spacing:1px;margin-bottom:8px;">⭐ Leads Generados</div>
+      <div style="font-size:36px;font-weight:900;color:#1a8c4e;letter-spacing:-1.5px;">38</div>
+      <div style="font-size:11px;color:#aaa;margin-top:4px;">formularios enviados</div>
+    </div>
+    <div style="background:#fff;border-radius:12px;padding:20px 18px;box-shadow:0 2px 12px rgba(0,0,0,.07);border-top:3px solid #9B59B6;">
+      <div style="font-size:11px;font-weight:700;color:#888;text-transform:uppercase;letter-spacing:1px;margin-bottom:8px;">% Tráfico Pagado</div>
+      <div style="font-size:30px;font-weight:800;color:#7d3c98;letter-spacing:-1px;">87,7%</div>
+      <div style="font-size:11px;color:#aaa;margin-top:4px;">1.694 de 1.931 sesiones</div>
+    </div>
+  </div>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px;margin-bottom:24px;">
+    <div style="background:#fff;border-radius:12px;padding:24px;box-shadow:0 2px 12px rgba(0,0,0,.07);">
+      <h2 style="font-size:15px;font-weight:700;color:#1a1a2e;margin:0 0 18px;padding-left:10px;border-left:3px solid #1B4F8A;">Distribución de Tráfico</h2>
+      <canvas id="chartCanalOcup-oct" height="220"></canvas>
+    </div>
+    <div style="background:#fff;border-radius:12px;padding:24px;box-shadow:0 2px 12px rgba(0,0,0,.07);">
+      <h2 style="font-size:15px;font-weight:700;color:#1a1a2e;margin:0 0 18px;padding-left:10px;border-left:3px solid #1B4F8A;">Performance por Campaña</h2>
+      <table style="width:100%;border-collapse:collapse;font-size:12.5px;">
+        <thead><tr><th style="text-align:left;">Campaña</th><th style="text-align:right;">Sesiones</th><th style="text-align:right;">Rebote</th></tr></thead>
+        <tbody>
+<tr style="border-bottom:1px solid #f0f2f8;"><td style="padding:8px 10px;"><strong>B2B - Exámenes ocupacionales</strong></td><td style="text-align:right;padding:8px 10px;font-weight:700;">596</td><td style="text-align:right;padding:8px 10px;">42,1%</td></tr>
+<tr style="border-bottom:1px solid #f0f2f8;"><td style="padding:8px 10px;"><strong>B2B - Exámenes preocupacionales</strong></td><td style="text-align:right;padding:8px 10px;font-weight:700;">471</td><td style="text-align:right;padding:8px 10px;">42,0%</td></tr>
+<tr style="border-bottom:1px solid #f0f2f8;"><td style="padding:8px 10px;"><strong>B2B - Salud Ocup. Genérica</strong></td><td style="text-align:right;padding:8px 10px;font-weight:700;">251</td><td style="text-align:right;padding:8px 10px;">51,8%</td></tr>
+<tr style="border-bottom:1px solid #f0f2f8;"><td style="padding:8px 10px;"><strong>B2B - Evaluaciones Psico.</strong></td><td style="text-align:right;padding:8px 10px;font-weight:700;">156</td><td style="text-align:right;padding:8px 10px;color:#c0392b;">60,3%</td></tr>
+<tr style="border-bottom:1px solid #f0f2f8;"><td style="padding:8px 10px;"><strong>B2B - Display ocupacional</strong></td><td style="text-align:right;padding:8px 10px;font-weight:700;">194</td><td style="text-align:right;padding:8px 10px;color:#c0392b;">83,0%</td></tr>
+<tr style=""><td style="padding:8px 10px;">(organic)</td><td style="text-align:right;padding:8px 10px;font-weight:700;">76</td><td style="text-align:right;padding:8px 10px;">29,0%</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px;margin-bottom:24px;">
+    <div style="background:#fff;border-radius:12px;padding:24px;box-shadow:0 2px 12px rgba(0,0,0,.07);">
+      <h2 style="font-size:15px;font-weight:700;color:#1a1a2e;margin:0 0 18px;padding-left:10px;border-left:3px solid #00B4D8;">Páginas Más Visitadas</h2>
+      <canvas id="chartPaginasOcup-oct" height="200"></canvas>
+    </div>
+    <div style="background:#fff;border-radius:12px;padding:24px;box-shadow:0 2px 12px rgba(0,0,0,.07);">
+      <h2 style="font-size:15px;font-weight:700;color:#1a1a2e;margin:0 0 4px;padding-left:10px;border-left:3px solid #2ECC71;">Embudo de Conversión — Formulario</h2>
+      <p style="font-size:12px;color:#888;margin:0 0 18px;padding-left:14px;">De sesión a lead enviado (usuarios por evento)</p>
+        <div style="margin-bottom:14px;">
+          <div style="display:flex;justify-content:space-between;margin-bottom:4px;">
+            <span style="font-size:12.5px;font-weight:600;color:#333;">Sesiones totales</span>
+            <span style="font-size:12.5px;font-weight:700;color:#1B4F8A;">1.931 <span style="color:#aaa;font-weight:400;">(100,0%)</span></span>
+          </div>
+          <div style="background:#f0f2f8;border-radius:4px;height:10px;overflow:hidden;">
+            <div style="height:100%;width:100%;background:#1B4F8A;border-radius:4px;transition:width .6s;"></div>
+          </div>
+        </div>
+        <div style="margin-bottom:14px;">
+          <div style="display:flex;justify-content:space-between;margin-bottom:4px;">
+            <span style="font-size:12.5px;font-weight:600;color:#333;">Iniciaron formulario</span>
+            <span style="font-size:12.5px;font-weight:700;color:#00B4D8;">71 <span style="color:#aaa;font-weight:400;">(3,7%)</span></span>
+          </div>
+          <div style="background:#f0f2f8;border-radius:4px;height:10px;overflow:hidden;">
+            <div style="height:100%;width:3.7%;background:#00B4D8;border-radius:4px;transition:width .6s;"></div>
+          </div>
+        </div>
+        <div style="margin-bottom:14px;">
+          <div style="display:flex;justify-content:space-between;margin-bottom:4px;">
+            <span style="font-size:12.5px;font-weight:600;color:#333;">Completaron pasos</span>
+            <span style="font-size:12.5px;font-weight:700;color:#F39C12;">49 <span style="color:#aaa;font-weight:400;">(2,5%)</span></span>
+          </div>
+          <div style="background:#f0f2f8;border-radius:4px;height:10px;overflow:hidden;">
+            <div style="height:100%;width:2.5%;background:#F39C12;border-radius:4px;transition:width .6s;"></div>
+          </div>
+        </div>
+        <div style="margin-bottom:14px;">
+          <div style="display:flex;justify-content:space-between;margin-bottom:4px;">
+            <span style="font-size:12.5px;font-weight:600;color:#333;">Formulario enviado ✓</span>
+            <span style="font-size:12.5px;font-weight:700;color:#2ECC71;">26 <span style="color:#aaa;font-weight:400;">(1,3%)</span></span>
+          </div>
+          <div style="background:#f0f2f8;border-radius:4px;height:10px;overflow:hidden;">
+            <div style="height:100%;width:1.3%;background:#2ECC71;border-radius:4px;transition:width .6s;"></div>
+          </div>
+        </div>
+      <div style="background:#E8F8F1;border-radius:8px;padding:12px 14px;margin-top:16px;text-align:center;">
+        <div style="font-size:11px;color:#1a8c4e;font-weight:700;text-transform:uppercase;letter-spacing:0.5px;">Tasa de conversión a lead</div>
+        <div style="font-size:28px;font-weight:900;color:#1a8c4e;margin-top:2px;">1,3%</div>
+        <div style="font-size:11px;color:#888;margin-top:2px;">26 leads de 1.931 sesiones</div>
+      </div>
+    </div>
+  </div>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:20px;margin-bottom:24px;">
+    <div style="background:#fff;border-radius:12px;padding:24px;box-shadow:0 2px 12px rgba(0,0,0,.07);">
+      <h2 style="font-size:15px;font-weight:700;color:#1a1a2e;margin:0 0 18px;padding-left:10px;border-left:3px solid #9B59B6;">Distribución Geográfica</h2>
+      <canvas id="chartGeoOcup-oct" height="200"></canvas>
+    </div>
+    <div style="background:#fff;border-radius:12px;padding:24px;box-shadow:0 2px 12px rgba(0,0,0,.07);">
+      <h2 style="font-size:15px;font-weight:700;color:#1a1a2e;margin:0 0 18px;padding-left:10px;border-left:3px solid #E67E22;">Dispositivos</h2>
+      <canvas id="chartBrowserOcup-oct" height="200"></canvas>
+    </div>
+  </div>
+</div>
+<footer style="background:#0f2d5c;color:rgba(255,255,255,0.5);text-align:center;padding:16px;font-size:12px;">
+  Período: 1–31 Oct 2026 &nbsp;·&nbsp; Fuente: Google Analytics 4 &nbsp;·&nbsp; Blanco Salud — Salud Ocupacional
+</footer>
+</div>
+<div id="page-googleads-b2b-oct" class="month-page" style="display:none;">
+<header class="header">
+  <div class="header-left">
+    <div class="logo-box"><img data-logo src="" alt="Blanco Salud" style="height:52px;object-fit:contain;display:block;"></div>
+    <div style="display:flex;flex-direction:column;gap:3px;">
+      <h1 style="font-size:21px;font-weight:700;color:#fff;letter-spacing:-0.3px;margin:0;line-height:1.2;">Google Ads B2B — Salud Ocupacional</h1>
+      <p style="font-size:13px;color:rgba(255,255,255,0.72);margin:0;font-weight:400;letter-spacing:0.2px;">Performance campañas B2B — 1 al 31 Octubre 2026</p>
+    </div>
+  </div>
+  <div class="header-right">
+    <div class="badge-period">1 – 31 Octubre 2026</div>
+    <div class="badge-source">Fuente: Google Ads</div>
+  </div>
+</header>
+<div style="max-width:1300px;margin:0 auto;padding:28px 32px;overflow-x:hidden;">
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:16px;margin-bottom:24px;">
+  <div style="background:#fff;border-radius:12px;padding:20px;box-shadow:0 2px 12px rgba(0,0,0,.07);border-top:3px solid #1B4F8A;text-align:center;">
+    <div style="font-size:11px;font-weight:700;color:#888;text-transform:uppercase;letter-spacing:1px;margin-bottom:8px;">Inversión B2B</div>
+    <div style="font-size:26px;font-weight:800;color:#1B4F8A;">$850.333</div>
+    <div style="font-size:11px;color:#888;margin-top:4px;">CLP</div>
+  </div><div style="background:#fff;border-radius:12px;padding:20px;box-shadow:0 2px 12px rgba(0,0,0,.07);border-top:3px solid #00B4D8;text-align:center;">
+    <div style="font-size:11px;font-weight:700;color:#888;text-transform:uppercase;letter-spacing:1px;margin-bottom:8px;">Clics B2B</div>
+    <div style="font-size:26px;font-weight:800;color:#00B4D8;">2.070</div>
+    <div style="font-size:11px;color:#888;margin-top:4px;">búsqueda + display</div>
+  </div><div style="background:#fff;border-radius:12px;padding:20px;box-shadow:0 2px 12px rgba(0,0,0,.07);border-top:3px solid #2ECC71;text-align:center;">
+    <div style="font-size:11px;font-weight:700;color:#888;text-transform:uppercase;letter-spacing:1px;margin-bottom:8px;">CTR búsqueda</div>
+    <div style="font-size:26px;font-weight:800;color:#2ECC71;">7,7%</div>
+    <div style="font-size:11px;color:#888;margin-top:4px;">promedio B2B</div>
+  </div><div style="background:#fff;border-radius:12px;padding:20px;box-shadow:0 2px 12px rgba(0,0,0,.07);border-top:3px solid #F39C12;text-align:center;">
+    <div style="font-size:11px;font-weight:700;color:#888;text-transform:uppercase;letter-spacing:1px;margin-bottom:8px;">Conversiones</div>
+    <div style="font-size:26px;font-weight:800;color:#F39C12;">87,6</div>
+    <div style="font-size:11px;color:#888;margin-top:4px;">formularios B2B (Google Ads)</div>
+  </div><div style="background:#fff;border-radius:12px;padding:20px;box-shadow:0 2px 12px rgba(0,0,0,.07);border-top:3px solid #9B59B6;text-align:center;">
+    <div style="font-size:11px;font-weight:700;color:#888;text-transform:uppercase;letter-spacing:1px;margin-bottom:8px;">CPA Promedio</div>
+    <div style="font-size:26px;font-weight:800;color:#9B59B6;">$9.711</div>
+    <div style="font-size:11px;color:#888;margin-top:4px;">CLP</div>
+  </div>
+</div>
+<div style="background:#fff;border-radius:12px;padding:24px;box-shadow:0 2px 12px rgba(0,0,0,.07);margin-bottom:24px;">
+  <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:16px;padding:12px 16px;background:#F4F7FB;border-radius:10px;border:1px solid #E2E8F2;">
+    <span style="font-size:12px;font-weight:700;color:#1B4F8A;">📅 Filtrar período:</span>
+    <label style="font-size:12px;color:#6B7A99;font-weight:600;">Desde</label>
+    <input type="date" id="dateStart-oct" value="2026-10-01" min="2026-10-01" max="2026-10-31" onchange="applyDateFilterM('oct')" style="border:1px solid #E2E8F2;border-radius:6px;padding:4px 8px;font-size:12px;color:#1A2340;cursor:pointer;background:#fff;">
+    <label style="font-size:12px;color:#6B7A99;font-weight:600;">Hasta</label>
+    <input type="date" id="dateEnd-oct" value="2026-10-31" min="2026-10-01" max="2026-10-31" onchange="applyDateFilterM('oct')" style="border:1px solid #E2E8F2;border-radius:6px;padding:4px 8px;font-size:12px;color:#1A2340;cursor:pointer;background:#fff;">
+    <button onclick="document.getElementById('dateStart-oct').value='2026-10-01';document.getElementById('dateEnd-oct').value='2026-10-31';applyDateFilterM('oct');" style="background:#E2E8F2;border:none;border-radius:6px;color:#1B4F8A;padding:5px 12px;font-size:11px;font-weight:700;cursor:pointer;">Reset</button>
+    <span style="font-size:11px;color:#95A5A6;margin-left:4px;">· Afecta ambos gráficos de gasto diario</span>
+  </div>
+  <h2 style="font-size:15px;font-weight:700;color:#1a1a2e;margin:0 0 18px;padding-left:10px;border-left:4px solid #1B4F8A;">Gasto diario B2B y CPC — Octubre 2026</h2>
+  <canvas id="chartGadsTimelineB2B-oct" height="100"></canvas>
+</div>
+<div style="background:#fff;border-radius:12px;padding:24px;box-shadow:0 2px 12px rgba(0,0,0,.07);margin-bottom:24px;">
+  <h2 style="font-size:15px;font-weight:700;color:#1a1a2e;margin:0 0 18px;padding-left:10px;border-left:4px solid #00B4D8;">B2B — Salud Ocupacional</h2>
+  <div style="overflow-x:auto;">
+  <table style="width:100%;border-collapse:collapse;font-size:12.5px;">
+    <thead><tr>
+      <th style="text-align:left;width:38%;">Campaña + Keywords top <span style="font-size:10px;font-weight:400;color:rgba(255,255,255,0.65);">(c = clics en el período)</span></th>
+      <th style="text-align:right;">Impr.</th><th style="text-align:right;">Clics</th><th style="text-align:right;">CTR</th>
+      <th style="text-align:right;">Inversión</th><th style="text-align:right;">Conv.</th><th style="text-align:right;">CPA</th>
+    </tr></thead>
+    <tbody><tr style="border-bottom:1px solid #f0f2f8;">
+      <td style="padding:10px 12px;">
+        <strong style="font-size:12.5px;">Salud Ocup. Genérica</strong>
+        <div style="margin-top:5px;"><span style="display:inline-block;background:#EBF3FF;color:#1B4F8A;border-radius:12px;padding:2px 10px;font-size:11px;margin:2px 3px 2px 0;">exámenes médicos laborales <span style="color:#888;">(69c)</span></span><span style="display:inline-block;background:#EBF3FF;color:#1B4F8A;border-radius:12px;padding:2px 10px;font-size:11px;margin:2px 3px 2px 0;">outsourcing salud ocupacional <span style="color:#888;">(48c)</span></span><span style="display:inline-block;background:#EBF3FF;color:#1B4F8A;border-radius:12px;padding:2px 10px;font-size:11px;margin:2px 3px 2px 0;">centro médico laboral <span style="color:#888;">(38c)</span></span><span style="display:inline-block;background:#EBF3FF;color:#1B4F8A;border-radius:12px;padding:2px 10px;font-size:11px;margin:2px 3px 2px 0;">evaluaciones médicas laborales <span style="color:#888;">(36c)</span></span></div>
+      </td>
+      <td style="text-align:right;padding:10px 12px;font-size:12.5px;">5.374</td>
+      <td style="text-align:right;padding:10px 12px;font-size:12.5px;font-weight:700;">303</td>
+      <td style="text-align:right;padding:10px 12px;font-size:12.5px;">5,6%</td>
+      <td style="text-align:right;padding:10px 12px;font-size:12.5px;font-weight:700;">$139.391</td>
+      <td style="text-align:right;padding:10px 12px;font-size:12.5px;font-weight:700;color:#1a8c4e;">5</td>
+      <td style="text-align:right;padding:10px 12px;font-size:12.5px;color:#555;">$27.878</td>
+    </tr><tr style="border-bottom:1px solid #f0f2f8;">
+      <td style="padding:10px 12px;">
+        <strong style="font-size:12.5px;">Exámenes ocupacionales</strong>
+        <div style="margin-top:5px;"><span style="display:inline-block;background:#EBF3FF;color:#1B4F8A;border-radius:12px;padding:2px 10px;font-size:11px;margin:2px 3px 2px 0;">examen ocupacional altura física <span style="color:#888;">(371c)</span></span><span style="display:inline-block;background:#EBF3FF;color:#1B4F8A;border-radius:12px;padding:2px 10px;font-size:11px;margin:2px 3px 2px 0;">exámenes ocupacionales <span style="color:#888;">(100c)</span></span><span style="display:inline-block;background:#EBF3FF;color:#1B4F8A;border-radius:12px;padding:2px 10px;font-size:11px;margin:2px 3px 2px 0;">examen gran altura geográfica <span style="color:#888;">(77c)</span></span><span style="display:inline-block;background:#EBF3FF;color:#1B4F8A;border-radius:12px;padding:2px 10px;font-size:11px;margin:2px 3px 2px 0;">examen ocupacional <span style="color:#888;">(70c)</span></span></div>
+      </td>
+      <td style="text-align:right;padding:10px 12px;font-size:12.5px;">8.353</td>
+      <td style="text-align:right;padding:10px 12px;font-size:12.5px;font-weight:700;">735</td>
+      <td style="text-align:right;padding:10px 12px;font-size:12.5px;">8,8%</td>
+      <td style="text-align:right;padding:10px 12px;font-size:12.5px;font-weight:700;">$334.313</td>
+      <td style="text-align:right;padding:10px 12px;font-size:12.5px;font-weight:700;color:#1a8c4e;">44</td>
+      <td style="text-align:right;padding:10px 12px;font-size:12.5px;color:#555;">$7.598</td>
+    </tr><tr style="border-bottom:1px solid #f0f2f8;">
+      <td style="padding:10px 12px;">
+        <strong style="font-size:12.5px;">Exámenes preocupacionales</strong>
+        <div style="margin-top:5px;"><span style="display:inline-block;background:#EBF3FF;color:#1B4F8A;border-radius:12px;padding:2px 10px;font-size:11px;margin:2px 3px 2px 0;">exámenes preocupacionales <span style="color:#888;">(195c)</span></span><span style="display:inline-block;background:#EBF3FF;color:#1B4F8A;border-radius:12px;padding:2px 10px;font-size:11px;margin:2px 3px 2px 0;">examen preocupacional <span style="color:#888;">(162c)</span></span><span style="display:inline-block;background:#EBF3FF;color:#1B4F8A;border-radius:12px;padding:2px 10px;font-size:11px;margin:2px 3px 2px 0;">[examen preocupacional] <span style="color:#888;">(77c)</span></span><span style="display:inline-block;background:#EBF3FF;color:#1B4F8A;border-radius:12px;padding:2px 10px;font-size:11px;margin:2px 3px 2px 0;">"examen preocupacional para empresas" <span style="color:#888;">(71c)</span></span></div>
+      </td>
+      <td style="text-align:right;padding:10px 12px;font-size:12.5px;">6.443</td>
+      <td style="text-align:right;padding:10px 12px;font-size:12.5px;font-weight:700;">566</td>
+      <td style="text-align:right;padding:10px 12px;font-size:12.5px;">8,8%</td>
+      <td style="text-align:right;padding:10px 12px;font-size:12.5px;font-weight:700;">$276.595</td>
+      <td style="text-align:right;padding:10px 12px;font-size:12.5px;font-weight:700;color:#1a8c4e;">37,6</td>
+      <td style="text-align:right;padding:10px 12px;font-size:12.5px;color:#555;">$7.364</td>
+    </tr><tr style="border-bottom:1px solid #f0f2f8;">
+      <td style="padding:10px 12px;">
+        <strong style="font-size:12.5px;">Evaluaciones Psico.</strong>
+        <div style="margin-top:5px;"><span style="display:inline-block;background:#EBF3FF;color:#1B4F8A;border-radius:12px;padding:2px 10px;font-size:11px;margin:2px 3px 2px 0;">evaluación psicológica laboral <span style="color:#888;">(60c)</span></span><span style="display:inline-block;background:#EBF3FF;color:#1B4F8A;border-radius:12px;padding:2px 10px;font-size:11px;margin:2px 3px 2px 0;">[examen psicosensotécnico] <span style="color:#888;">(34c)</span></span></div>
+      </td>
+      <td style="text-align:right;padding:10px 12px;font-size:12.5px;">3.375</td>
+      <td style="text-align:right;padding:10px 12px;font-size:12.5px;font-weight:700;">204</td>
+      <td style="text-align:right;padding:10px 12px;font-size:12.5px;">6,0%</td>
+      <td style="text-align:right;padding:10px 12px;font-size:12.5px;font-weight:700;">$48.566</td>
+      <td style="text-align:right;padding:10px 12px;font-size:12.5px;font-weight:700;color:#1a8c4e;">1</td>
+      <td style="text-align:right;padding:10px 12px;font-size:12.5px;color:#555;">$48.566</td>
+    </tr><tr style="border-bottom:1px solid #f0f2f8;background:#FAFBFF;">
+      <td style="padding:10px 12px;">
+        <strong style="font-size:12.5px;">Display ocupacional</strong>
+        <div style="margin-top:5px;"><span style="font-size:11px;color:#aaa;">Sin keywords (Display)</span></div>
+      </td>
+      <td style="text-align:right;padding:10px 12px;font-size:12.5px;">333.841</td>
+      <td style="text-align:right;padding:10px 12px;font-size:12.5px;font-weight:700;">262</td>
+      <td style="text-align:right;padding:10px 12px;font-size:12.5px;">0,1%</td>
+      <td style="text-align:right;padding:10px 12px;font-size:12.5px;font-weight:700;">$51.468</td>
+      <td style="text-align:right;padding:10px 12px;font-size:12.5px;font-weight:700;color:#888;">0</td>
+      <td style="text-align:right;padding:10px 12px;font-size:12.5px;color:#555;">—</td>
+    </tr></tbody>
+    <tfoot><tr style="background:#EBF3FF;border-top:2px solid #1B4F8A;">
+        <td style="padding:10px 12px;font-size:12.5px;font-weight:700;color:#1a1a2e;">Total B2B <span style="font-size:10px;font-weight:400;color:#888;"></span></td>
+        <td style="text-align:right;padding:10px 12px;font-size:12.5px;font-weight:700;">357.386</td>
+        <td style="text-align:right;padding:10px 12px;font-size:12.5px;font-weight:700;">2.070</td>
+        <td style="text-align:right;padding:10px 12px;font-size:12.5px;font-weight:700;">—</td>
+        <td style="text-align:right;padding:10px 12px;font-size:12.5px;font-weight:700;">$850.333</td>
+        <td style="text-align:right;padding:10px 12px;font-size:12.5px;font-weight:700;color:#1a8c4e;">87,6</td>
+        <td style="text-align:right;padding:10px 12px;font-size:12.5px;font-weight:700;color:#555;">$9.711</td>
+      </tr></tfoot>
+  </table>
+  </div>
+  <p style="font-size:11px;color:#888;margin:12px 0 0;">Conv. B2B = conversiones registradas en Google Ads (formularios).</p>
+</div>
+</div>
+<div style="max-width:1300px;margin:0 auto;padding:0 32px 24px;font-size:12px;color:#888;text-align:center;">Período: 1–31 Oct 2026 &nbsp;·&nbsp; Fuente: Google Ads &nbsp;·&nbsp; Blanco Salud</div>
+</div>
+<div id="page-googleads-b2c-oct" class="month-page" style="display:none;">
+<header class="header">
+  <div class="header-left">
+    <div class="logo-box"><img data-logo src="" alt="Blanco Salud" style="height:52px;object-fit:contain;display:block;"></div>
+    <div style="display:flex;flex-direction:column;gap:3px;">
+      <h1 style="font-size:21px;font-weight:700;color:#fff;letter-spacing:-0.3px;margin:0;line-height:1.2;">Google Ads B2C — Imagenología</h1>
+      <p style="font-size:13px;color:rgba(255,255,255,0.72);margin:0;font-weight:400;letter-spacing:0.2px;">Performance campañas B2C — 1 al 31 Octubre 2026</p>
+    </div>
+  </div>
+  <div class="header-right">
+    <div class="badge-period">1 – 31 Octubre 2026</div>
+    <div class="badge-source">Fuente: Google Ads</div>
+  </div>
+</header>
+<div style="max-width:1300px;margin:0 auto;padding:28px 32px;overflow-x:hidden;">
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:16px;margin-bottom:24px;">
+  <div style="background:#fff;border-radius:12px;padding:20px;box-shadow:0 2px 12px rgba(0,0,0,.07);border-top:3px solid #1B4F8A;text-align:center;">
+    <div style="font-size:11px;font-weight:700;color:#888;text-transform:uppercase;letter-spacing:1px;margin-bottom:8px;">Inversión B2C</div>
+    <div style="font-size:26px;font-weight:800;color:#1B4F8A;">$2.978.870</div>
+    <div style="font-size:11px;color:#888;margin-top:4px;">CLP · incl. Display $210.065</div>
+  </div><div style="background:#fff;border-radius:12px;padding:20px;box-shadow:0 2px 12px rgba(0,0,0,.07);border-top:3px solid #00B4D8;text-align:center;">
+    <div style="font-size:11px;font-weight:700;color:#888;text-transform:uppercase;letter-spacing:1px;margin-bottom:8px;">Clics B2C</div>
+    <div style="font-size:26px;font-weight:800;color:#00B4D8;">20.326</div>
+    <div style="font-size:11px;color:#888;margin-top:4px;">búsqueda</div>
+  </div><div style="background:#fff;border-radius:12px;padding:20px;box-shadow:0 2px 12px rgba(0,0,0,.07);border-top:3px solid #2ECC71;text-align:center;">
+    <div style="font-size:11px;font-weight:700;color:#888;text-transform:uppercase;letter-spacing:1px;margin-bottom:8px;">CTR búsqueda</div>
+    <div style="font-size:26px;font-weight:800;color:#2ECC71;">13,6%</div>
+    <div style="font-size:11px;color:#888;margin-top:4px;">promedio B2C</div>
+  </div><div style="background:#fff;border-radius:12px;padding:20px;box-shadow:0 2px 12px rgba(0,0,0,.07);border-top:3px solid #F39C12;text-align:center;">
+    <div style="font-size:11px;font-weight:700;color:#888;text-transform:uppercase;letter-spacing:1px;margin-bottom:8px;">Conversiones</div>
+    <div style="font-size:26px;font-weight:800;color:#F39C12;">1.148</div>
+    <div style="font-size:11px;color:#888;margin-top:4px;">agendamientos (paso 8 GA4)</div>
+  </div><div style="background:#fff;border-radius:12px;padding:20px;box-shadow:0 2px 12px rgba(0,0,0,.07);border-top:3px solid #9B59B6;text-align:center;">
+    <div style="font-size:11px;font-weight:700;color:#888;text-transform:uppercase;letter-spacing:1px;margin-bottom:8px;">CPA Promedio</div>
+    <div style="font-size:26px;font-weight:800;color:#9B59B6;">$2.412</div>
+    <div style="font-size:11px;color:#888;margin-top:4px;">CLP · campañas de búsqueda</div>
+  </div>
+</div>
+<div style="background:#fff;border-radius:12px;padding:24px;box-shadow:0 2px 12px rgba(0,0,0,.07);margin-bottom:24px;">
+  
+  <h2 style="font-size:15px;font-weight:700;color:#1a1a2e;margin:0 0 18px;padding-left:10px;border-left:4px solid #1B4F8A;">Gasto diario B2C y CPC — Octubre 2026</h2>
+  <canvas id="chartGadsTimelineB2C-oct" height="100"></canvas>
+</div>
+<div style="background:#fff;border-radius:12px;padding:24px;box-shadow:0 2px 12px rgba(0,0,0,.07);margin-bottom:24px;">
+  <h2 style="font-size:15px;font-weight:700;color:#1a1a2e;margin:0 0 18px;padding-left:10px;border-left:4px solid #1B4F8A;">B2C — Imagenología</h2>
+  <div style="overflow-x:auto;">
+  <table style="width:100%;border-collapse:collapse;font-size:12.5px;">
+    <thead><tr>
+      <th style="text-align:left;width:38%;">Campaña + Keywords top <span style="font-size:10px;font-weight:400;color:rgba(255,255,255,0.65);">(c = clics en el período)</span></th>
+      <th style="text-align:right;">Impr.</th><th style="text-align:right;">Clics</th><th style="text-align:right;">CTR</th>
+      <th style="text-align:right;">Inversión</th><th style="text-align:right;">Conv.</th><th style="text-align:right;">CPA</th>
+    </tr></thead>
+    <tbody><tr style="border-bottom:1px solid #f0f2f8;">
+      <td style="padding:10px 12px;">
+        <strong style="font-size:12.5px;">Laboratorio + muestras</strong>
+        <div style="margin-top:5px;"><span style="display:inline-block;background:#EBF3FF;color:#1B4F8A;border-radius:12px;padding:2px 10px;font-size:11px;margin:2px 3px 2px 0;">laboratorio clínico cerca de mí <span style="color:#888;">(2.755c)</span></span><span style="display:inline-block;background:#EBF3FF;color:#1B4F8A;border-radius:12px;padding:2px 10px;font-size:11px;margin:2px 3px 2px 0;">examenes de laboratorio precio <span style="color:#888;">(2.427c)</span></span><span style="display:inline-block;background:#EBF3FF;color:#1B4F8A;border-radius:12px;padding:2px 10px;font-size:11px;margin:2px 3px 2px 0;">examenes de laboratorio particular <span style="color:#888;">(1.787c)</span></span><span style="display:inline-block;background:#EBF3FF;color:#1B4F8A;border-radius:12px;padding:2px 10px;font-size:11px;margin:2px 3px 2px 0;">examenes de laboratorio Fonasa <span style="color:#888;">(650c)</span></span></div>
+      </td>
+      <td style="text-align:right;padding:10px 12px;font-size:12.5px;">21.394</td>
+      <td style="text-align:right;padding:10px 12px;font-size:12.5px;font-weight:700;">9.844</td>
+      <td style="text-align:right;padding:10px 12px;font-size:12.5px;">46,0%</td>
+      <td style="text-align:right;padding:10px 12px;font-size:12.5px;font-weight:700;">$150.139</td>
+      <td style="text-align:right;padding:10px 12px;font-size:12.5px;font-weight:700;color:#1a8c4e;">798</td>
+      <td style="text-align:right;padding:10px 12px;font-size:12.5px;color:#555;">$188</td>
+    </tr><tr style="border-bottom:1px solid #f0f2f8;">
+      <td style="padding:10px 12px;">
+        <strong style="font-size:12.5px;">Resonancia RM — Providencia, SC y Ñuñoa</strong>
+        <div style="margin-top:5px;"><span style="display:inline-block;background:#EBF3FF;color:#1B4F8A;border-radius:12px;padding:2px 10px;font-size:11px;margin:2px 3px 2px 0;">resonancia magnetica precio <span style="color:#888;">(285c)</span></span><span style="display:inline-block;background:#EBF3FF;color:#1B4F8A;border-radius:12px;padding:2px 10px;font-size:11px;margin:2px 3px 2px 0;">resonancia magnetica <span style="color:#888;">(263c)</span></span><span style="display:inline-block;background:#EBF3FF;color:#1B4F8A;border-radius:12px;padding:2px 10px;font-size:11px;margin:2px 3px 2px 0;">resonancia magnetica valor <span style="color:#888;">(232c)</span></span><span style="display:inline-block;background:#EBF3FF;color:#1B4F8A;border-radius:12px;padding:2px 10px;font-size:11px;margin:2px 3px 2px 0;">resonancia magnética precio <span style="color:#888;">(179c)</span></span></div>
+      </td>
+      <td style="text-align:right;padding:10px 12px;font-size:12.5px;">31.189</td>
+      <td style="text-align:right;padding:10px 12px;font-size:12.5px;font-weight:700;">2.797</td>
+      <td style="text-align:right;padding:10px 12px;font-size:12.5px;">9,0%</td>
+      <td style="text-align:right;padding:10px 12px;font-size:12.5px;font-weight:700;">$515.480</td>
+      <td style="text-align:right;padding:10px 12px;font-size:12.5px;font-weight:700;color:#1a8c4e;">106</td>
+      <td style="text-align:right;padding:10px 12px;font-size:12.5px;color:#555;">$4.863</td>
+    </tr><tr style="border-bottom:1px solid #f0f2f8;">
+      <td style="padding:10px 12px;">
+        <strong style="font-size:12.5px;">Resonancia RM — Las Condes y Vitacura</strong>
+        <div style="margin-top:5px;"><span style="display:inline-block;background:#EBF3FF;color:#1B4F8A;border-radius:12px;padding:2px 10px;font-size:11px;margin:2px 3px 2px 0;">resonancia magnetica <span style="color:#888;">(162c)</span></span><span style="display:inline-block;background:#EBF3FF;color:#1B4F8A;border-radius:12px;padding:2px 10px;font-size:11px;margin:2px 3px 2px 0;">resonancia magnetica precio <span style="color:#888;">(157c)</span></span><span style="display:inline-block;background:#EBF3FF;color:#1B4F8A;border-radius:12px;padding:2px 10px;font-size:11px;margin:2px 3px 2px 0;">resonancia magnetica valor <span style="color:#888;">(150c)</span></span><span style="display:inline-block;background:#EBF3FF;color:#1B4F8A;border-radius:12px;padding:2px 10px;font-size:11px;margin:2px 3px 2px 0;">resonancia rodilla <span style="color:#888;">(100c)</span></span></div>
+      </td>
+      <td style="text-align:right;padding:10px 12px;font-size:12.5px;">8.813</td>
+      <td style="text-align:right;padding:10px 12px;font-size:12.5px;font-weight:700;">980</td>
+      <td style="text-align:right;padding:10px 12px;font-size:12.5px;">11,1%</td>
+      <td style="text-align:right;padding:10px 12px;font-size:12.5px;font-weight:700;">$258.607</td>
+      <td style="text-align:right;padding:10px 12px;font-size:12.5px;font-weight:700;color:#1a8c4e;">27</td>
+      <td style="text-align:right;padding:10px 12px;font-size:12.5px;color:#555;">$9.578</td>
+    </tr><tr style="border-bottom:1px solid #f0f2f8;">
+      <td style="padding:10px 12px;">
+        <strong style="font-size:12.5px;">Resonancia RM — Maipú, Cerrillos y Pudahuel</strong>
+        <div style="margin-top:5px;"><span style="display:inline-block;background:#EBF3FF;color:#1B4F8A;border-radius:12px;padding:2px 10px;font-size:11px;margin:2px 3px 2px 0;">resonancia magnetica precio <span style="color:#888;">(150c)</span></span><span style="display:inline-block;background:#EBF3FF;color:#1B4F8A;border-radius:12px;padding:2px 10px;font-size:11px;margin:2px 3px 2px 0;">resonancia magnetica valor <span style="color:#888;">(147c)</span></span><span style="display:inline-block;background:#EBF3FF;color:#1B4F8A;border-radius:12px;padding:2px 10px;font-size:11px;margin:2px 3px 2px 0;">resonancia magnetica <span style="color:#888;">(146c)</span></span><span style="display:inline-block;background:#EBF3FF;color:#1B4F8A;border-radius:12px;padding:2px 10px;font-size:11px;margin:2px 3px 2px 0;">resonancia rodilla <span style="color:#888;">(94c)</span></span></div>
+      </td>
+      <td style="text-align:right;padding:10px 12px;font-size:12.5px;">8.661</td>
+      <td style="text-align:right;padding:10px 12px;font-size:12.5px;font-weight:700;">942</td>
+      <td style="text-align:right;padding:10px 12px;font-size:12.5px;">10,9%</td>
+      <td style="text-align:right;padding:10px 12px;font-size:12.5px;font-weight:700;">$257.797</td>
+      <td style="text-align:right;padding:10px 12px;font-size:12.5px;font-weight:700;color:#1a8c4e;">42</td>
+      <td style="text-align:right;padding:10px 12px;font-size:12.5px;color:#555;">$6.138</td>
+    </tr><tr style="border-bottom:1px solid #f0f2f8;">
+      <td style="padding:10px 12px;">
+        <strong style="font-size:12.5px;">Mamografía</strong>
+        <div style="margin-top:5px;"><span style="display:inline-block;background:#EBF3FF;color:#1B4F8A;border-radius:12px;padding:2px 10px;font-size:11px;margin:2px 3px 2px 0;">mamografía y ecografía <span style="color:#888;">(112c)</span></span><span style="display:inline-block;background:#EBF3FF;color:#1B4F8A;border-radius:12px;padding:2px 10px;font-size:11px;margin:2px 3px 2px 0;">"Necesito una mamografía" <span style="color:#888;">(84c)</span></span><span style="display:inline-block;background:#EBF3FF;color:#1B4F8A;border-radius:12px;padding:2px 10px;font-size:11px;margin:2px 3px 2px 0;">mamografía sin orden médica <span style="color:#888;">(83c)</span></span><span style="display:inline-block;background:#EBF3FF;color:#1B4F8A;border-radius:12px;padding:2px 10px;font-size:11px;margin:2px 3px 2px 0;">mamografía precio <span style="color:#888;">(66c)</span></span></div>
+      </td>
+      <td style="text-align:right;padding:10px 12px;font-size:12.5px;">17.024</td>
+      <td style="text-align:right;padding:10px 12px;font-size:12.5px;font-weight:700;">1.099</td>
+      <td style="text-align:right;padding:10px 12px;font-size:12.5px;">6,5%</td>
+      <td style="text-align:right;padding:10px 12px;font-size:12.5px;font-weight:700;">$189.350</td>
+      <td style="text-align:right;padding:10px 12px;font-size:12.5px;font-weight:700;color:#1a8c4e;">3</td>
+      <td style="text-align:right;padding:10px 12px;font-size:12.5px;color:#555;">$63.117</td>
+    </tr><tr style="border-bottom:1px solid #f0f2f8;">
+      <td style="padding:10px 12px;">
+        <strong style="font-size:12.5px;">TAC-Scanner</strong>
+        <div style="margin-top:5px;"><span style="display:inline-block;background:#EBF3FF;color:#1B4F8A;border-radius:12px;padding:2px 10px;font-size:11px;margin:2px 3px 2px 0;">cuánto cuesta un TAC <span style="color:#888;">(214c)</span></span><span style="display:inline-block;background:#EBF3FF;color:#1B4F8A;border-radius:12px;padding:2px 10px;font-size:11px;margin:2px 3px 2px 0;">escáner médico <span style="color:#888;">(151c)</span></span><span style="display:inline-block;background:#EBF3FF;color:#1B4F8A;border-radius:12px;padding:2px 10px;font-size:11px;margin:2px 3px 2px 0;">tac fonasa <span style="color:#888;">(144c)</span></span><span style="display:inline-block;background:#EBF3FF;color:#1B4F8A;border-radius:12px;padding:2px 10px;font-size:11px;margin:2px 3px 2px 0;">examen scanner <span style="color:#888;">(131c)</span></span></div>
+      </td>
+      <td style="text-align:right;padding:10px 12px;font-size:12.5px;">21.206</td>
+      <td style="text-align:right;padding:10px 12px;font-size:12.5px;font-weight:700;">2.201</td>
+      <td style="text-align:right;padding:10px 12px;font-size:12.5px;">10,4%</td>
+      <td style="text-align:right;padding:10px 12px;font-size:12.5px;font-weight:700;">$690.549</td>
+      <td style="text-align:right;padding:10px 12px;font-size:12.5px;font-weight:700;color:#1a8c4e;">148</td>
+      <td style="text-align:right;padding:10px 12px;font-size:12.5px;color:#555;">$4.666</td>
+    </tr><tr style="border-bottom:1px solid #f0f2f8;">
+      <td style="padding:10px 12px;">
+        <strong style="font-size:12.5px;">Ecografía</strong>
+        <div style="margin-top:5px;"><span style="display:inline-block;background:#EBF3FF;color:#1B4F8A;border-radius:12px;padding:2px 10px;font-size:11px;margin:2px 3px 2px 0;">ecotomografía precio <span style="color:#888;">(135c)</span></span><span style="display:inline-block;background:#EBF3FF;color:#1B4F8A;border-radius:12px;padding:2px 10px;font-size:11px;margin:2px 3px 2px 0;">cuánto cuesta una ecografía <span style="color:#888;">(117c)</span></span><span style="display:inline-block;background:#EBF3FF;color:#1B4F8A;border-radius:12px;padding:2px 10px;font-size:11px;margin:2px 3px 2px 0;">eco doppler venoso <span style="color:#888;">(102c)</span></span><span style="display:inline-block;background:#EBF3FF;color:#1B4F8A;border-radius:12px;padding:2px 10px;font-size:11px;margin:2px 3px 2px 0;">ecografía abdominal precio <span style="color:#888;">(98c)</span></span></div>
+      </td>
+      <td style="text-align:right;padding:10px 12px;font-size:12.5px;">30.049</td>
+      <td style="text-align:right;padding:10px 12px;font-size:12.5px;font-weight:700;">1.459</td>
+      <td style="text-align:right;padding:10px 12px;font-size:12.5px;">4,9%</td>
+      <td style="text-align:right;padding:10px 12px;font-size:12.5px;font-weight:700;">$190.357</td>
+      <td style="text-align:right;padding:10px 12px;font-size:12.5px;font-weight:700;color:#1a8c4e;">11</td>
+      <td style="text-align:right;padding:10px 12px;font-size:12.5px;color:#555;">$17.305</td>
+    </tr><tr style="border-bottom:1px solid #f0f2f8;">
+      <td style="padding:10px 12px;">
+        <strong style="font-size:12.5px;">Resonancia Antofagasta</strong>
+        <div style="margin-top:5px;"><span style="display:inline-block;background:#EBF3FF;color:#1B4F8A;border-radius:12px;padding:2px 10px;font-size:11px;margin:2px 3px 2px 0;">resonancia magnetica precio <span style="color:#888;">(70c)</span></span><span style="display:inline-block;background:#EBF3FF;color:#1B4F8A;border-radius:12px;padding:2px 10px;font-size:11px;margin:2px 3px 2px 0;">resonancia magnética valor <span style="color:#888;">(66c)</span></span><span style="display:inline-block;background:#EBF3FF;color:#1B4F8A;border-radius:12px;padding:2px 10px;font-size:11px;margin:2px 3px 2px 0;">resonancia magnética precio <span style="color:#888;">(55c)</span></span><span style="display:inline-block;background:#EBF3FF;color:#1B4F8A;border-radius:12px;padding:2px 10px;font-size:11px;margin:2px 3px 2px 0;">resonancia magnetica valor <span style="color:#888;">(54c)</span></span></div>
+      </td>
+      <td style="text-align:right;padding:10px 12px;font-size:12.5px;">9.356</td>
+      <td style="text-align:right;padding:10px 12px;font-size:12.5px;font-weight:700;">857</td>
+      <td style="text-align:right;padding:10px 12px;font-size:12.5px;">9,2%</td>
+      <td style="text-align:right;padding:10px 12px;font-size:12.5px;font-weight:700;">$341.760</td>
+      <td style="text-align:right;padding:10px 12px;font-size:12.5px;font-weight:700;color:#1a8c4e;">13</td>
+      <td style="text-align:right;padding:10px 12px;font-size:12.5px;color:#555;">$26.289</td>
+    </tr><tr style="border-bottom:1px solid #f0f2f8;">
+      <td style="padding:10px 12px;">
+        <strong style="font-size:12.5px;">Resonancia Calama</strong>
+        <div style="margin-top:5px;"><span style="display:inline-block;background:#EBF3FF;color:#1B4F8A;border-radius:12px;padding:2px 10px;font-size:11px;margin:2px 3px 2px 0;">resonancia magnetica precio <span style="color:#888;">(38c)</span></span></div>
+      </td>
+      <td style="text-align:right;padding:10px 12px;font-size:12.5px;">1.391</td>
+      <td style="text-align:right;padding:10px 12px;font-size:12.5px;font-weight:700;">147</td>
+      <td style="text-align:right;padding:10px 12px;font-size:12.5px;">10,6%</td>
+      <td style="text-align:right;padding:10px 12px;font-size:12.5px;font-weight:700;">$174.766</td>
+      <td style="text-align:right;padding:10px 12px;font-size:12.5px;font-weight:700;color:#888;">0</td>
+      <td style="text-align:right;padding:10px 12px;font-size:12.5px;color:#555;">—</td>
+    </tr><tr style="border-bottom:1px solid #f0f2f8;background:#FAFBFF;">
+      <td style="padding:10px 12px;">
+        <strong style="font-size:12.5px;">Display - Remarketing Resonancia Magnética</strong>
+        <div style="margin-top:5px;"><span style="font-size:11px;color:#aaa;">Sin keywords (Display)</span></div>
+      </td>
+      <td style="text-align:right;padding:10px 12px;font-size:12.5px;">587.286</td>
+      <td style="text-align:right;padding:10px 12px;font-size:12.5px;font-weight:700;">662</td>
+      <td style="text-align:right;padding:10px 12px;font-size:12.5px;">0,1%</td>
+      <td style="text-align:right;padding:10px 12px;font-size:12.5px;font-weight:700;">$89.762</td>
+      <td style="text-align:right;padding:10px 12px;font-size:12.5px;font-weight:700;color:#888;">0</td>
+      <td style="text-align:right;padding:10px 12px;font-size:12.5px;color:#555;">—</td>
+    </tr><tr style="border-bottom:1px solid #f0f2f8;background:#FAFBFF;">
+      <td style="padding:10px 12px;">
+        <strong style="font-size:12.5px;">Display - Copago TAC Scanner</strong>
+        <div style="margin-top:5px;"><span style="font-size:11px;color:#aaa;">Sin keywords (Display)</span></div>
+      </td>
+      <td style="text-align:right;padding:10px 12px;font-size:12.5px;">792.016</td>
+      <td style="text-align:right;padding:10px 12px;font-size:12.5px;font-weight:700;">929</td>
+      <td style="text-align:right;padding:10px 12px;font-size:12.5px;">0,1%</td>
+      <td style="text-align:right;padding:10px 12px;font-size:12.5px;font-weight:700;">$120.303</td>
+      <td style="text-align:right;padding:10px 12px;font-size:12.5px;font-weight:700;color:#888;">0</td>
+      <td style="text-align:right;padding:10px 12px;font-size:12.5px;color:#555;">—</td>
+    </tr></tbody>
+    <tfoot><tr style="background:#EBF3FF;border-top:2px solid #1B4F8A;">
+        <td style="padding:10px 12px;font-size:12.5px;font-weight:700;color:#1a1a2e;">Total B2C <span style="font-size:10px;font-weight:400;color:#888;">(excl. Display)</span></td>
+        <td style="text-align:right;padding:10px 12px;font-size:12.5px;font-weight:700;">149.083</td>
+        <td style="text-align:right;padding:10px 12px;font-size:12.5px;font-weight:700;">20.326</td>
+        <td style="text-align:right;padding:10px 12px;font-size:12.5px;font-weight:700;">13,6%</td>
+        <td style="text-align:right;padding:10px 12px;font-size:12.5px;font-weight:700;">$2.768.805</td>
+        <td style="text-align:right;padding:10px 12px;font-size:12.5px;font-weight:700;color:#1a8c4e;">1.148</td>
+        <td style="text-align:right;padding:10px 12px;font-size:12.5px;font-weight:700;color:#555;">$2.412</td>
+      </tr><tr style="background:#EBF3FF;border-top:2px solid #1B4F8A;">
+        <td style="padding:10px 12px;font-size:12.5px;font-weight:700;color:#1a1a2e;">Total B2C <span style="font-size:10px;font-weight:400;color:#888;">(incl. Display)</span></td>
+        <td style="text-align:right;padding:10px 12px;font-size:12.5px;font-weight:700;">1.528.385</td>
+        <td style="text-align:right;padding:10px 12px;font-size:12.5px;font-weight:700;">21.917</td>
+        <td style="text-align:right;padding:10px 12px;font-size:12.5px;font-weight:700;">1,4%</td>
+        <td style="text-align:right;padding:10px 12px;font-size:12.5px;font-weight:700;">$2.978.870</td>
+        <td style="text-align:right;padding:10px 12px;font-size:12.5px;font-weight:700;color:#1a8c4e;">1.148</td>
+        <td style="text-align:right;padding:10px 12px;font-size:12.5px;font-weight:700;color:#555;">$2.595</td>
+      </tr></tfoot>
+  </table>
+  </div>
+  <p style="font-size:11px;color:#888;margin:12px 0 0;">Conv. B2C = eventos confirmacion_paso8 en GA4 por campaña de la sesión. Resonancia RM Providencia suma también "Campaña Resonancia RM 2025" (nombre anterior).</p>
+</div>
+</div>
+<div style="max-width:1300px;margin:0 auto;padding:0 32px 24px;font-size:12px;color:#888;text-align:center;">Período: 1–31 Oct 2026 &nbsp;·&nbsp; Fuente: Google Ads &nbsp;·&nbsp; Blanco Salud</div>
+</div>
+<div id="page-meta-oct" class="month-page" style="display:none;">
+<header class="header">
+  <div class="header-left">
+    <div class="logo-box"><img data-logo src="" alt="Blanco Salud" style="height:52px;object-fit:contain;display:block;"></div>
+    <div style="display:flex;flex-direction:column;gap:3px;">
+      <h1 style="font-size:21px;font-weight:700;color:#fff;letter-spacing:-0.3px;margin:0;line-height:1.2;">Meta Ads — Blanco Salud</h1>
+      <p style="font-size:13px;color:rgba(255,255,255,0.72);margin:0;font-weight:400;letter-spacing:0.2px;">Campañas Resonancia Magnética y Uber Call Center — 1 al 31 Octubre 2026</p>
+    </div>
+  </div>
+  <div class="header-right">
+    <div class="badge-period">1 – 31 Octubre 2026</div>
+    <div class="badge-source">Fuente: Meta Ads</div>
+  </div>
+</header>
+<div style="max-width:1300px;margin:0 auto;padding:28px 32px;overflow-x:hidden;">
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:16px;margin-bottom:24px;"><div style="background:#fff;border-radius:12px;padding:20px;box-shadow:0 2px 12px rgba(0,0,0,.07);border-top:3px solid #1877F2;text-align:center;">
+    <div style="font-size:11px;font-weight:700;color:#888;text-transform:uppercase;letter-spacing:1px;margin-bottom:8px;">Inversión Total</div>
+    <div style="font-size:26px;font-weight:800;color:#1877F2;">$132.659</div>
+    <div style="font-size:11px;color:#888;margin-top:4px;">CLP</div>
+  </div><div style="background:#fff;border-radius:12px;padding:20px;box-shadow:0 2px 12px rgba(0,0,0,.07);border-top:3px solid #1B4F8A;text-align:center;">
+    <div style="font-size:11px;font-weight:700;color:#888;text-transform:uppercase;letter-spacing:1px;margin-bottom:8px;">Alcance</div>
+    <div style="font-size:26px;font-weight:800;color:#1B4F8A;">50.030</div>
+    <div style="font-size:11px;color:#888;margin-top:4px;">suma por anuncio</div>
+  </div><div style="background:#fff;border-radius:12px;padding:20px;box-shadow:0 2px 12px rgba(0,0,0,.07);border-top:3px solid #00B4D8;text-align:center;">
+    <div style="font-size:11px;font-weight:700;color:#888;text-transform:uppercase;letter-spacing:1px;margin-bottom:8px;">Impresiones</div>
+    <div style="font-size:26px;font-weight:800;color:#00B4D8;">73.863</div>
+    <div style="font-size:11px;color:#888;margin-top:4px;">total</div>
+  </div><div style="background:#fff;border-radius:12px;padding:20px;box-shadow:0 2px 12px rgba(0,0,0,.07);border-top:3px solid #2ECC71;text-align:center;">
+    <div style="font-size:11px;font-weight:700;color:#888;text-transform:uppercase;letter-spacing:1px;margin-bottom:8px;">Visitas a Landing</div>
+    <div style="font-size:26px;font-weight:800;color:#2ECC71;">4.817</div>
+    <div style="font-size:11px;color:#888;margin-top:4px;">visualizaciones landing</div>
+  </div><div style="background:#fff;border-radius:12px;padding:20px;box-shadow:0 2px 12px rgba(0,0,0,.07);border-top:3px solid #F39C12;text-align:center;">
+    <div style="font-size:11px;font-weight:700;color:#888;text-transform:uppercase;letter-spacing:1px;margin-bottom:8px;">Costo / Resultado</div>
+    <div style="font-size:26px;font-weight:800;color:#F39C12;">$28</div>
+    <div style="font-size:11px;color:#888;margin-top:4px;">CLP promedio</div>
+  </div></div>
+<div style="background:#fff;border-radius:12px;padding:24px;box-shadow:0 2px 12px rgba(0,0,0,.07);margin-bottom:24px;">
+  <h2 style="font-size:15px;font-weight:700;color:#1a1a2e;margin:0 0 18px;padding-left:10px;border-left:4px solid #1877F2;">Comparativo por anuncio</h2>
+  <div style="overflow-x:auto;">
+  <table style="width:100%;border-collapse:collapse;font-size:12.5px;">
+    <thead><tr><th style="text-align:left;">Anuncio</th><th style="text-align:right;">Inversión</th><th style="text-align:right;">Impresiones</th><th style="text-align:right;">Alcance</th>
+      <th style="text-align:right;">Visitas a Landing</th><th style="text-align:right;">Costo/Res.</th><th style="text-align:right;">Frecuencia</th><th style="text-align:right;">CPM</th></tr></thead>
+    <tbody><tr style="border-bottom:1px solid #f0f2f8;">
+  <td style="padding:10px 12px;font-size:12.5px;font-weight:700;">🖼️ Anuncio Resonancia Magnética 2<div style="font-size:11px;font-weight:400;color:#888;">Resonancia Magnética</div></td>
+  <td style="text-align:right;padding:10px 12px;font-size:12.5px;font-weight:700;">$CLP 101.095</td>
+  <td style="text-align:right;padding:10px 12px;font-size:12.5px;">56.543</td>
+  <td style="text-align:right;padding:10px 12px;font-size:12.5px;">35.224</td>
+  <td style="text-align:right;padding:10px 12px;font-size:12.5px;font-weight:700;">4.045</td>
+  <td style="text-align:right;padding:10px 12px;font-size:12.5px;">$25 CLP</td>
+  <td style="text-align:right;padding:10px 12px;font-size:12.5px;">1,61x</td>
+  <td style="text-align:right;padding:10px 12px;font-size:12.5px;">$1.788 CLP</td>
+</tr><tr style="border-bottom:1px solid #f0f2f8;">
+  <td style="padding:10px 12px;font-size:12.5px;font-weight:700;">🖼️ Anuncio Resonancia Magnética<div style="font-size:11px;font-weight:400;color:#888;">Resonancia Magnética</div></td>
+  <td style="text-align:right;padding:10px 12px;font-size:12.5px;font-weight:700;">$CLP 13.703</td>
+  <td style="text-align:right;padding:10px 12px;font-size:12.5px;">6.963</td>
+  <td style="text-align:right;padding:10px 12px;font-size:12.5px;">6.196</td>
+  <td style="text-align:right;padding:10px 12px;font-size:12.5px;font-weight:700;">545</td>
+  <td style="text-align:right;padding:10px 12px;font-size:12.5px;">$25 CLP</td>
+  <td style="text-align:right;padding:10px 12px;font-size:12.5px;">1,12x</td>
+  <td style="text-align:right;padding:10px 12px;font-size:12.5px;">$1.968 CLP</td>
+</tr><tr style="border-bottom:1px solid #f0f2f8;">
+  <td style="padding:10px 12px;font-size:12.5px;font-weight:700;">📹 Reel / Video Uber<div style="font-size:11px;font-weight:400;color:#888;">Uber Call Center</div></td>
+  <td style="text-align:right;padding:10px 12px;font-size:12.5px;font-weight:700;">$CLP 13.126</td>
+  <td style="text-align:right;padding:10px 12px;font-size:12.5px;">7.398</td>
+  <td style="text-align:right;padding:10px 12px;font-size:12.5px;">6.187</td>
+  <td style="text-align:right;padding:10px 12px;font-size:12.5px;font-weight:700;">167</td>
+  <td style="text-align:right;padding:10px 12px;font-size:12.5px;">$79 CLP</td>
+  <td style="text-align:right;padding:10px 12px;font-size:12.5px;">1,20x</td>
+  <td style="text-align:right;padding:10px 12px;font-size:12.5px;">$1.774 CLP</td>
+</tr><tr style="border-bottom:1px solid #f0f2f8;">
+  <td style="padding:10px 12px;font-size:12.5px;font-weight:700;">🖼️ Imagen estática Uber<div style="font-size:11px;font-weight:400;color:#888;">Uber Call Center</div></td>
+  <td style="text-align:right;padding:10px 12px;font-size:12.5px;font-weight:700;">$CLP 4.590</td>
+  <td style="text-align:right;padding:10px 12px;font-size:12.5px;">2.839</td>
+  <td style="text-align:right;padding:10px 12px;font-size:12.5px;">2.313</td>
+  <td style="text-align:right;padding:10px 12px;font-size:12.5px;font-weight:700;">60</td>
+  <td style="text-align:right;padding:10px 12px;font-size:12.5px;">$76 CLP</td>
+  <td style="text-align:right;padding:10px 12px;font-size:12.5px;">1,23x</td>
+  <td style="text-align:right;padding:10px 12px;font-size:12.5px;">$1.617 CLP</td>
+</tr><tr style="border-bottom:1px solid #f0f2f8;">
+  <td style="padding:10px 12px;font-size:12.5px;font-weight:700;">🎠 Carrusel Uber<div style="font-size:11px;font-weight:400;color:#888;">Uber Call Center</div></td>
+  <td style="text-align:right;padding:10px 12px;font-size:12.5px;font-weight:700;">$CLP 145</td>
+  <td style="text-align:right;padding:10px 12px;font-size:12.5px;">120</td>
+  <td style="text-align:right;padding:10px 12px;font-size:12.5px;">110</td>
+  <td style="text-align:right;padding:10px 12px;font-size:12.5px;font-weight:700;">—</td>
+  <td style="text-align:right;padding:10px 12px;font-size:12.5px;">—</td>
+  <td style="text-align:right;padding:10px 12px;font-size:12.5px;">1,09x</td>
+  <td style="text-align:right;padding:10px 12px;font-size:12.5px;">$1.208 CLP</td>
+</tr></tbody>
+    <tfoot><tr style="background:#EEF3FC;border-top:2px solid #1877F2;">
+      <td style="padding:10px 12px;font-size:12.5px;font-weight:700;">Total</td>
+      <td style="text-align:right;padding:10px 12px;font-size:12.5px;font-weight:700;">$CLP 132.659</td>
+      <td style="text-align:right;padding:10px 12px;font-size:12.5px;font-weight:700;">73.863</td>
+      <td style="text-align:right;padding:10px 12px;font-size:12.5px;font-weight:700;">50.030</td>
+      <td style="text-align:right;padding:10px 12px;font-size:12.5px;font-weight:700;color:#1a8c4e;">4.817</td>
+      <td style="text-align:right;padding:10px 12px;font-size:12.5px;font-weight:700;">$28 CLP</td>
+      <td style="text-align:right;padding:10px 12px;font-size:12.5px;font-weight:700;">—</td>
+      <td style="text-align:right;padding:10px 12px;font-size:12.5px;font-weight:700;">$1.796 CLP</td>
+    </tr></tfoot>
+  </table></div>
+  <p style="font-size:11px;color:#888;margin:12px 0 0;">Alcance total = suma del alcance de cada anuncio (puede incluir personas repetidas entre anuncios). Resultado = visitas a la página de destino.</p>
+</div>
+<h2 style="font-size:15px;font-weight:700;color:#1a1a2e;margin:0 0 16px;padding-left:10px;border-left:4px solid #1877F2;">Detalle por anuncio</h2>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px;margin-bottom:24px;"><div style="background:#fff;border-radius:12px;box-shadow:0 2px 12px rgba(0,0,0,.07);overflow:hidden;display:flex;flex-direction:column;">
+  <div style="background:#1B4F8A;color:#fff;padding:10px 14px;display:flex;align-items:center;gap:8px;">
+    <span style="font-size:13px;font-weight:700;">🖼️ Anuncio Resonancia Magnética 2</span>
+    <span style="margin-left:auto;background:rgba(255,255,255,0.2);border-radius:8px;padding:2px 8px;font-size:10px;">activo</span>
+  </div>
+  
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));">
+    <div style="padding:8px 10px;border-bottom:1px solid #f4f6fa;"><div style="font-size:10px;font-weight:700;color:#999;text-transform:uppercase;letter-spacing:0.7px;">Inversión</div><div style="font-size:15px;font-weight:800;color:#1a1a2e;margin-top:2px;">$101.095 CLP</div></div><div style="padding:8px 10px;border-bottom:1px solid #f4f6fa;"><div style="font-size:10px;font-weight:700;color:#999;text-transform:uppercase;letter-spacing:0.7px;">Visitas a Landing</div><div style="font-size:15px;font-weight:800;color:#1a1a2e;margin-top:2px;">4.045</div></div>
+    <div style="padding:8px 10px;border-bottom:1px solid #f4f6fa;"><div style="font-size:10px;font-weight:700;color:#999;text-transform:uppercase;letter-spacing:0.7px;">Costo/Res.</div><div style="font-size:13px;font-weight:600;color:#444;margin-top:2px;">$25 CLP</div></div><div style="padding:8px 10px;border-bottom:1px solid #f4f6fa;"><div style="font-size:10px;font-weight:700;color:#999;text-transform:uppercase;letter-spacing:0.7px;">Alcance</div><div style="font-size:13px;font-weight:600;color:#444;margin-top:2px;">35.224</div></div>
+    <div style="padding:8px 10px;border-bottom:1px solid #f4f6fa;"><div style="font-size:10px;font-weight:700;color:#999;text-transform:uppercase;letter-spacing:0.7px;">Impresiones</div><div style="font-size:13px;font-weight:600;color:#444;margin-top:2px;">56.543</div></div><div style="padding:8px 10px;border-bottom:1px solid #f4f6fa;"><div style="font-size:10px;font-weight:700;color:#999;text-transform:uppercase;letter-spacing:0.7px;">Frecuencia</div><div style="font-size:13px;font-weight:600;color:#444;margin-top:2px;">1,61x</div></div>
+    <div style="padding:8px 10px;border-bottom:1px solid #f4f6fa;"><div style="font-size:10px;font-weight:700;color:#999;text-transform:uppercase;letter-spacing:0.7px;">CPM</div><div style="font-size:13px;font-weight:600;color:#444;margin-top:2px;">$1.788 CLP</div></div><div style="padding:8px 10px;border-bottom:1px solid #f4f6fa;"><div style="font-size:10px;font-weight:700;color:#999;text-transform:uppercase;letter-spacing:0.7px;">Campaña</div><div style="font-size:13px;font-weight:600;color:#444;margin-top:2px;">Resonancia Magnética</div></div>
+  </div>
+</div><div style="background:#fff;border-radius:12px;box-shadow:0 2px 12px rgba(0,0,0,.07);overflow:hidden;display:flex;flex-direction:column;">
+  <div style="background:#1B4F8A;color:#fff;padding:10px 14px;display:flex;align-items:center;gap:8px;">
+    <span style="font-size:13px;font-weight:700;">🖼️ Anuncio Resonancia Magnética</span>
+    <span style="margin-left:auto;background:rgba(255,255,255,0.2);border-radius:8px;padding:2px 8px;font-size:10px;">activo</span>
+  </div>
+  
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));">
+    <div style="padding:8px 10px;border-bottom:1px solid #f4f6fa;"><div style="font-size:10px;font-weight:700;color:#999;text-transform:uppercase;letter-spacing:0.7px;">Inversión</div><div style="font-size:15px;font-weight:800;color:#1a1a2e;margin-top:2px;">$13.703 CLP</div></div><div style="padding:8px 10px;border-bottom:1px solid #f4f6fa;"><div style="font-size:10px;font-weight:700;color:#999;text-transform:uppercase;letter-spacing:0.7px;">Visitas a Landing</div><div style="font-size:15px;font-weight:800;color:#1a1a2e;margin-top:2px;">545</div></div>
+    <div style="padding:8px 10px;border-bottom:1px solid #f4f6fa;"><div style="font-size:10px;font-weight:700;color:#999;text-transform:uppercase;letter-spacing:0.7px;">Costo/Res.</div><div style="font-size:13px;font-weight:600;color:#444;margin-top:2px;">$25 CLP</div></div><div style="padding:8px 10px;border-bottom:1px solid #f4f6fa;"><div style="font-size:10px;font-weight:700;color:#999;text-transform:uppercase;letter-spacing:0.7px;">Alcance</div><div style="font-size:13px;font-weight:600;color:#444;margin-top:2px;">6.196</div></div>
+    <div style="padding:8px 10px;border-bottom:1px solid #f4f6fa;"><div style="font-size:10px;font-weight:700;color:#999;text-transform:uppercase;letter-spacing:0.7px;">Impresiones</div><div style="font-size:13px;font-weight:600;color:#444;margin-top:2px;">6.963</div></div><div style="padding:8px 10px;border-bottom:1px solid #f4f6fa;"><div style="font-size:10px;font-weight:700;color:#999;text-transform:uppercase;letter-spacing:0.7px;">Frecuencia</div><div style="font-size:13px;font-weight:600;color:#444;margin-top:2px;">1,12x</div></div>
+    <div style="padding:8px 10px;border-bottom:1px solid #f4f6fa;"><div style="font-size:10px;font-weight:700;color:#999;text-transform:uppercase;letter-spacing:0.7px;">CPM</div><div style="font-size:13px;font-weight:600;color:#444;margin-top:2px;">$1.968 CLP</div></div><div style="padding:8px 10px;border-bottom:1px solid #f4f6fa;"><div style="font-size:10px;font-weight:700;color:#999;text-transform:uppercase;letter-spacing:0.7px;">Campaña</div><div style="font-size:13px;font-weight:600;color:#444;margin-top:2px;">Resonancia Magnética</div></div>
+  </div>
+</div><div style="background:#fff;border-radius:12px;box-shadow:0 2px 12px rgba(0,0,0,.07);overflow:hidden;display:flex;flex-direction:column;">
+  <div style="background:#00B4D8;color:#fff;padding:10px 14px;display:flex;align-items:center;gap:8px;">
+    <span style="font-size:13px;font-weight:700;">📹 Reel / Video Uber</span>
+    <span style="margin-left:auto;background:rgba(255,255,255,0.2);border-radius:8px;padding:2px 8px;font-size:10px;">pausada</span>
+  </div>
+  <div style="height:220px;overflow:hidden;background:#f8f9fc;"><img data-metaimg="Reel" src="" alt="Reel / Video Uber" style="height:220px;width:100%;object-fit:cover;object-position:50% 45%;"></div>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));">
+    <div style="padding:8px 10px;border-bottom:1px solid #f4f6fa;"><div style="font-size:10px;font-weight:700;color:#999;text-transform:uppercase;letter-spacing:0.7px;">Inversión</div><div style="font-size:15px;font-weight:800;color:#1a1a2e;margin-top:2px;">$13.126 CLP</div></div><div style="padding:8px 10px;border-bottom:1px solid #f4f6fa;"><div style="font-size:10px;font-weight:700;color:#999;text-transform:uppercase;letter-spacing:0.7px;">Visitas a Landing</div><div style="font-size:15px;font-weight:800;color:#1a1a2e;margin-top:2px;">167</div></div>
+    <div style="padding:8px 10px;border-bottom:1px solid #f4f6fa;"><div style="font-size:10px;font-weight:700;color:#999;text-transform:uppercase;letter-spacing:0.7px;">Costo/Res.</div><div style="font-size:13px;font-weight:600;color:#444;margin-top:2px;">$79 CLP</div></div><div style="padding:8px 10px;border-bottom:1px solid #f4f6fa;"><div style="font-size:10px;font-weight:700;color:#999;text-transform:uppercase;letter-spacing:0.7px;">Alcance</div><div style="font-size:13px;font-weight:600;color:#444;margin-top:2px;">6.187</div></div>
+    <div style="padding:8px 10px;border-bottom:1px solid #f4f6fa;"><div style="font-size:10px;font-weight:700;color:#999;text-transform:uppercase;letter-spacing:0.7px;">Impresiones</div><div style="font-size:13px;font-weight:600;color:#444;margin-top:2px;">7.398</div></div><div style="padding:8px 10px;border-bottom:1px solid #f4f6fa;"><div style="font-size:10px;font-weight:700;color:#999;text-transform:uppercase;letter-spacing:0.7px;">Frecuencia</div><div style="font-size:13px;font-weight:600;color:#444;margin-top:2px;">1,20x</div></div>
+    <div style="padding:8px 10px;border-bottom:1px solid #f4f6fa;"><div style="font-size:10px;font-weight:700;color:#999;text-transform:uppercase;letter-spacing:0.7px;">CPM</div><div style="font-size:13px;font-weight:600;color:#444;margin-top:2px;">$1.774 CLP</div></div><div style="padding:8px 10px;border-bottom:1px solid #f4f6fa;"><div style="font-size:10px;font-weight:700;color:#999;text-transform:uppercase;letter-spacing:0.7px;">Campaña</div><div style="font-size:13px;font-weight:600;color:#444;margin-top:2px;">Uber Call Center</div></div>
+  </div>
+</div><div style="background:#fff;border-radius:12px;box-shadow:0 2px 12px rgba(0,0,0,.07);overflow:hidden;display:flex;flex-direction:column;">
+  <div style="background:#00B4D8;color:#fff;padding:10px 14px;display:flex;align-items:center;gap:8px;">
+    <span style="font-size:13px;font-weight:700;">🖼️ Imagen estática Uber</span>
+    <span style="margin-left:auto;background:rgba(255,255,255,0.2);border-radius:8px;padding:2px 8px;font-size:10px;">pausada</span>
+  </div>
+  <div style="height:220px;overflow:hidden;background:#f8f9fc;"><img data-metaimg="Anuncio" src="" alt="Imagen estática Uber" style="height:220px;width:100%;object-fit:cover;object-position:50% 45%;"></div>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));">
+    <div style="padding:8px 10px;border-bottom:1px solid #f4f6fa;"><div style="font-size:10px;font-weight:700;color:#999;text-transform:uppercase;letter-spacing:0.7px;">Inversión</div><div style="font-size:15px;font-weight:800;color:#1a1a2e;margin-top:2px;">$4.590 CLP</div></div><div style="padding:8px 10px;border-bottom:1px solid #f4f6fa;"><div style="font-size:10px;font-weight:700;color:#999;text-transform:uppercase;letter-spacing:0.7px;">Visitas a Landing</div><div style="font-size:15px;font-weight:800;color:#1a1a2e;margin-top:2px;">60</div></div>
+    <div style="padding:8px 10px;border-bottom:1px solid #f4f6fa;"><div style="font-size:10px;font-weight:700;color:#999;text-transform:uppercase;letter-spacing:0.7px;">Costo/Res.</div><div style="font-size:13px;font-weight:600;color:#444;margin-top:2px;">$76 CLP</div></div><div style="padding:8px 10px;border-bottom:1px solid #f4f6fa;"><div style="font-size:10px;font-weight:700;color:#999;text-transform:uppercase;letter-spacing:0.7px;">Alcance</div><div style="font-size:13px;font-weight:600;color:#444;margin-top:2px;">2.313</div></div>
+    <div style="padding:8px 10px;border-bottom:1px solid #f4f6fa;"><div style="font-size:10px;font-weight:700;color:#999;text-transform:uppercase;letter-spacing:0.7px;">Impresiones</div><div style="font-size:13px;font-weight:600;color:#444;margin-top:2px;">2.839</div></div><div style="padding:8px 10px;border-bottom:1px solid #f4f6fa;"><div style="font-size:10px;font-weight:700;color:#999;text-transform:uppercase;letter-spacing:0.7px;">Frecuencia</div><div style="font-size:13px;font-weight:600;color:#444;margin-top:2px;">1,23x</div></div>
+    <div style="padding:8px 10px;border-bottom:1px solid #f4f6fa;"><div style="font-size:10px;font-weight:700;color:#999;text-transform:uppercase;letter-spacing:0.7px;">CPM</div><div style="font-size:13px;font-weight:600;color:#444;margin-top:2px;">$1.617 CLP</div></div><div style="padding:8px 10px;border-bottom:1px solid #f4f6fa;"><div style="font-size:10px;font-weight:700;color:#999;text-transform:uppercase;letter-spacing:0.7px;">Campaña</div><div style="font-size:13px;font-weight:600;color:#444;margin-top:2px;">Uber Call Center</div></div>
+  </div>
+</div><div style="background:#fff;border-radius:12px;box-shadow:0 2px 12px rgba(0,0,0,.07);overflow:hidden;display:flex;flex-direction:column;">
+  <div style="background:#9B59B6;color:#fff;padding:10px 14px;display:flex;align-items:center;gap:8px;">
+    <span style="font-size:13px;font-weight:700;">🎠 Carrusel Uber</span>
+    <span style="margin-left:auto;background:rgba(255,255,255,0.2);border-radius:8px;padding:2px 8px;font-size:10px;">pausada</span>
+  </div>
+  <div style="height:220px;overflow:hidden;background:#f8f9fc;"><img data-metaimg="Carrusel" src="" alt="Carrusel Uber" style="height:220px;width:100%;object-fit:cover;object-position:50% 45%;"></div>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));">
+    <div style="padding:8px 10px;border-bottom:1px solid #f4f6fa;"><div style="font-size:10px;font-weight:700;color:#999;text-transform:uppercase;letter-spacing:0.7px;">Inversión</div><div style="font-size:15px;font-weight:800;color:#1a1a2e;margin-top:2px;">$145 CLP</div></div><div style="padding:8px 10px;border-bottom:1px solid #f4f6fa;"><div style="font-size:10px;font-weight:700;color:#999;text-transform:uppercase;letter-spacing:0.7px;">Visitas a Landing</div><div style="font-size:15px;font-weight:800;color:#1a1a2e;margin-top:2px;">—</div></div>
+    <div style="padding:8px 10px;border-bottom:1px solid #f4f6fa;"><div style="font-size:10px;font-weight:700;color:#999;text-transform:uppercase;letter-spacing:0.7px;">Costo/Res.</div><div style="font-size:13px;font-weight:600;color:#444;margin-top:2px;">—</div></div><div style="padding:8px 10px;border-bottom:1px solid #f4f6fa;"><div style="font-size:10px;font-weight:700;color:#999;text-transform:uppercase;letter-spacing:0.7px;">Alcance</div><div style="font-size:13px;font-weight:600;color:#444;margin-top:2px;">110</div></div>
+    <div style="padding:8px 10px;border-bottom:1px solid #f4f6fa;"><div style="font-size:10px;font-weight:700;color:#999;text-transform:uppercase;letter-spacing:0.7px;">Impresiones</div><div style="font-size:13px;font-weight:600;color:#444;margin-top:2px;">120</div></div><div style="padding:8px 10px;border-bottom:1px solid #f4f6fa;"><div style="font-size:10px;font-weight:700;color:#999;text-transform:uppercase;letter-spacing:0.7px;">Frecuencia</div><div style="font-size:13px;font-weight:600;color:#444;margin-top:2px;">1,09x</div></div>
+    <div style="padding:8px 10px;border-bottom:1px solid #f4f6fa;"><div style="font-size:10px;font-weight:700;color:#999;text-transform:uppercase;letter-spacing:0.7px;">CPM</div><div style="font-size:13px;font-weight:600;color:#444;margin-top:2px;">$1.208 CLP</div></div><div style="padding:8px 10px;border-bottom:1px solid #f4f6fa;"><div style="font-size:10px;font-weight:700;color:#999;text-transform:uppercase;letter-spacing:0.7px;">Campaña</div><div style="font-size:13px;font-weight:600;color:#444;margin-top:2px;">Uber Call Center</div></div>
+  </div>
+</div></div>
+</div>
+<footer style="background:#0f2d5c;color:rgba(255,255,255,0.5);text-align:center;padding:16px;font-size:12px;">
+  Período: 1–31 Oct 2026 &nbsp;·&nbsp; Fuente: Meta Ads Manager &nbsp;·&nbsp; Blanco Salud
+</footer>
+</div>
+<div id="page-imagenologia-nov" class="month-page" style="display:none;">
+<header class="header">
+  <div class="header-left">
+    <div class="logo-box"><img data-logo src="" alt="Blanco Salud" style="height:52px;object-fit:contain;display:block;"></div>
+    <div style="display:flex;flex-direction:column;gap:3px;">
+      <h1 style="font-size:21px;font-weight:700;color:#fff;letter-spacing:-0.3px;margin:0;line-height:1.2;">Dashboard Digital</h1>
+      <p style="font-size:13px;color:rgba(255,255,255,0.72);margin:0;font-weight:400;letter-spacing:0.2px;">Principales métricas e indicadores</p>
+    </div>
+  </div>
+  <div class="header-right">
+    <div class="badge-period">1 – 17 Noviembre 2026</div>
+    <div class="badge-source">Fuente: Google Analytics 4</div>
+  </div>
+</header>
+<div class="container">
+  <section>
+    <div class="section-title"><div class="icon">📊</div>Indicadores Clave — Noviembre 2026 (1–17)</div>
+    <div class="kpi-grid">
+      <div class="kpi-card" style="--accent: var(--blue);">
+        <div class="kpi-icon" style="--icon-bg: #EBF3FF; color: var(--blue);">👥</div>
+        <div class="kpi-label">Sesiones Totales</div>
+        <div class="kpi-value">51.214</div>
+        <div class="kpi-sub">Visitas al sitio web</div>
+      </div>
+      <div class="kpi-card kpi-star">
+        <div class="kpi-icon" style="--icon-bg: #E8F8F1; color: var(--green);">✅</div>
+        <div class="kpi-label">Paso 8 — Confirmación</div>
+        <div class="kpi-value">3.814</div>
+        <div class="kpi-sub">confirmacion_paso8</div>
+      </div>
+      <div class="kpi-card" style="--accent: #F39C12;">
+        <div class="kpi-icon" style="--icon-bg: #FFF8E1; color: #F39C12;">💰</div>
+        <div class="kpi-label">Costo por Conv.</div>
+        <div class="kpi-value">$261</div>
+        <div class="kpi-sub">Google Ads · $995k ÷ 3.814 paso8</div>
+      </div>
+      <div class="kpi-card" style="--accent: #8B5CF6;">
+        <div class="kpi-icon" style="--icon-bg: #F3F0FF; color: #8B5CF6;">🎯</div>
+        <div class="kpi-label">Tasa de Conversión</div>
+        <div class="kpi-value">7,45%</div>
+        <div class="kpi-sub">Sesiones → Hora agendada</div>
+      </div>
+      <div class="kpi-card" style="--accent: var(--orange);">
+        <div class="kpi-icon" style="--icon-bg: #FFF3E0; color: var(--orange);">↩️</div>
+        <div class="kpi-label">Tasa de Rebote</div>
+        <div class="kpi-value">38,0%</div>
+        <div class="kpi-sub">Promedio ponderado</div>
+      </div>
+    </div>
+  </section>
+  <section>
+    <div class="section-title"><div class="icon">📡</div>Tráfico Pago vs Orgánico — Distribución de Canales</div>
+    <div class="two-col">
+      <div class="card">
+        <div class="chart-title">Sesiones por Tipo de Canal</div>
+        <div class="chart-wrap" style="max-width: 320px; margin: 0 auto;"><canvas id="chartDonutTrafico-nov" height="280"></canvas></div>
+        <div style="display:flex; flex-wrap:wrap; gap:8px 16px; margin-top:14px; justify-content:center;">
+          <span style="font-size:12px;"><span style="display:inline-block;width:10px;height:10px;border-radius:2px;background:#1B4F8A;margin-right:4px;"></span>Orgánico 68,6%</span>
+          <span style="font-size:12px;"><span style="display:inline-block;width:10px;height:10px;border-radius:2px;background:#00B4D8;margin-right:4px;"></span>Directo 16,0%</span>
+          <span style="font-size:12px;"><span style="display:inline-block;width:10px;height:10px;border-radius:2px;background:#F39C12;margin-right:4px;"></span>Pagado 12,3%</span>
+          <span style="font-size:12px;"><span style="display:inline-block;width:10px;height:10px;border-radius:2px;background:#8B5CF6;margin-right:4px;"></span>Referral 1,5%</span>
+          <span style="font-size:12px;"><span style="display:inline-block;width:10px;height:10px;border-radius:2px;background:#95A5A6;margin-right:4px;"></span>Otros 1,7%</span>
+          
+        </div>
+      </div>
+      <div class="card">
+        <div class="chart-title">Tasa de Rebote por Canal</div>
+        <canvas id="chartBounceCanal-nov" height="220"></canvas>
+      </div>
+    </div>
+  </section>
+  <section>
+    <div class="section-title"><div class="icon">🔽</div>Embudo de Agendamiento — Pasos del Proceso</div>
+    <div class="card">
+      <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px;">
+        <div><div class="funnel-grid" id="funnelContainer-nov"></div></div>
+        <div style="display:flex; flex-direction:column; justify-content:center;">
+          <div class="chart-title" style="margin-bottom:16px;">Usuarios por Etapa</div>
+          <canvas id="chartFunnel-nov" height="280"></canvas>
+        </div>
+      </div>
+      <div class="funnel-final-banner" style="margin-top:20px;">
+        <div class="funnel-final-icon">✅</div>
+        <div class="funnel-final-text">
+          <strong>1.419 pacientes agendaron</strong>
+          <span>Completaron el proceso online · Conversión embudo: 43,7% desde paso 2</span>
+        </div>
+      </div>
+      <div class="funnel-call-out">
+        <span>📞</span>
+        <span><strong>1.040 usuarios</strong> hicieron clic para llamar al call center (evento llamar_call_center) — canal alternativo de conversión</span>
+      </div>
+    </div>
+  </section>
+  <section>
+    <div class="section-title"><div class="icon">📍</div>Dispositivos y Distribución Geográfica</div>
+    <div class="three-col">
+      <div class="card">
+        <div class="chart-title">Usuarios por Dispositivo</div>
+        <div style="max-width: 280px; margin: 0 auto;"><canvas id="chartDevices-nov" height="240"></canvas></div>
+        <div style="margin-top:16px; display:flex; flex-direction:column; gap:8px;">
+          <div style="display:flex; align-items:center; gap:10px;">
+            <div style="width:12px;height:12px;border-radius:3px;background:#1B4F8A;flex-shrink:0;"></div>
+            <div style="flex:1; font-size:13px; font-weight:600;">Móvil</div>
+            <div style="font-size:13px; font-weight:700;">17.231 usuarios</div>
+            <div style="width:40px;text-align:right;font-size:12px;color:var(--muted);">60,2%</div>
+          </div>
+          <div style="display:flex; align-items:center; gap:10px;">
+            <div style="width:12px;height:12px;border-radius:3px;background:#00B4D8;flex-shrink:0;"></div>
+            <div style="flex:1; font-size:13px; font-weight:600;">Escritorio</div>
+            <div style="font-size:13px; font-weight:700;">10.934 usuarios</div>
+            <div style="width:40px;text-align:right;font-size:12px;color:var(--muted);">38,2%</div>
+          </div>
+          <div style="display:flex; align-items:center; gap:10px;">
+            <div style="width:12px;height:12px;border-radius:3px;background:#95A5A6;flex-shrink:0;"></div>
+            <div style="flex:1; font-size:13px; font-weight:600;">Tablet</div>
+            <div style="font-size:13px; font-weight:700;">171 usuarios</div>
+            <div style="width:40px;text-align:right;font-size:12px;color:var(--muted);">0,6%</div>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="chart-title">Top Regiones por Usuarios Activos</div>
+        <canvas id="chartRegiones-nov" height="240"></canvas>
+      </div>
+    </div>
+  </section>
+</div>
+<footer class="footer"><strong>Período:</strong> 1–17 Nov 2026 &nbsp;·&nbsp; <strong>Fuente:</strong> Google Analytics 4 &nbsp;·&nbsp; <strong>Blanco Salud</strong></footer>
+</div>
+<div id="page-ocupacional-nov" class="month-page" style="display:none;">
+<header class="header">
+  <div class="header-left">
+    <div class="logo-box"><img data-logo src="" alt="Blanco Salud" style="height:52px;object-fit:contain;display:block;"></div>
+    <div style="display:flex;flex-direction:column;gap:3px;">
+      <h1 style="font-size:21px;font-weight:700;color:#fff;letter-spacing:-0.3px;margin:0;line-height:1.2;">Dashboard Digital</h1>
+      <p style="font-size:13px;color:rgba(255,255,255,0.72);margin:0;font-weight:400;letter-spacing:0.2px;">Salud Ocupacional — Principales métricas e indicadores</p>
+    </div>
+  </div>
+  <div class="header-right">
+    <div class="badge-period">1 – 17 Noviembre 2026</div>
+    <div class="badge-source">Fuente: Google Analytics 4</div>
+  </div>
+</header>
+<div style="max-width:1300px;margin:0 auto;padding:28px 32px;overflow-x:hidden;">
+  <div style="background:#EBF3FF;border-left:4px solid #1B4F8A;border-radius:8px;padding:12px 18px;margin-bottom:24px;font-size:13px;color:#1a3a6b;display:flex;align-items:center;gap:10px;">
+    <span style="font-size:16px;">💼</span>
+    <span><strong>Vista B2B — Empresas:</strong> Esta propiedad mide el sitio de Salud Ocupacional, orientado a captación de empresas. La conversión clave es el <strong>formulario de contacto</strong>, no el agendamiento online.</span>
+  </div>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:16px;margin-bottom:28px;">
+    <div style="background:#fff;border-radius:12px;padding:20px 18px;box-shadow:0 2px 12px rgba(0,0,0,.07);border-top:3px solid #1B4F8A;">
+      <div style="font-size:11px;font-weight:700;color:#888;text-transform:uppercase;letter-spacing:1px;margin-bottom:8px;">Sesiones</div>
+      <div style="font-size:30px;font-weight:800;color:#1a1a2e;letter-spacing:-1px;">811</div>
+      <div style="font-size:11px;color:#aaa;margin-top:4px;">1–17 Nov 2026</div>
+    </div>
+    <div style="background:#fff;border-radius:12px;padding:20px 18px;box-shadow:0 2px 12px rgba(0,0,0,.07);border-top:3px solid #00B4D8;">
+      <div style="font-size:11px;font-weight:700;color:#888;text-transform:uppercase;letter-spacing:1px;margin-bottom:8px;">Usuarios Activos</div>
+      <div style="font-size:30px;font-weight:800;color:#1a1a2e;letter-spacing:-1px;">678</div>
+      <div style="font-size:11px;color:#aaa;margin-top:4px;">usuarios únicos</div>
+    </div>
+    <div style="background:#fff;border-radius:12px;padding:20px 18px;box-shadow:0 2px 12px rgba(0,0,0,.07);border-top:3px solid #F39C12;">
+      <div style="font-size:11px;font-weight:700;color:#888;text-transform:uppercase;letter-spacing:1px;margin-bottom:8px;">Tasa de Rebote</div>
+      <div style="font-size:30px;font-weight:800;color:#c97a00;letter-spacing:-1px;">49,1%</div>
+      <div style="font-size:11px;color:#aaa;margin-top:4px;">promedio ponderado</div>
+    </div>
+    <div style="background:#fff;border-radius:12px;padding:20px 18px;box-shadow:0 2px 12px rgba(0,0,0,.07);border-top:3px solid #2ECC71;transform:scale(1.03);">
+      <div style="font-size:11px;font-weight:700;color:#1a8c4e;text-transform:uppercase;letter-spacing:1px;margin-bottom:8px;">⭐ Leads Generados</div>
+      <div style="font-size:36px;font-weight:900;color:#1a8c4e;letter-spacing:-1.5px;">21</div>
+      <div style="font-size:11px;color:#aaa;margin-top:4px;">formularios enviados</div>
+    </div>
+    <div style="background:#fff;border-radius:12px;padding:20px 18px;box-shadow:0 2px 12px rgba(0,0,0,.07);border-top:3px solid #9B59B6;">
+      <div style="font-size:11px;font-weight:700;color:#888;text-transform:uppercase;letter-spacing:1px;margin-bottom:8px;">% Tráfico Pagado</div>
+      <div style="font-size:30px;font-weight:800;color:#7d3c98;letter-spacing:-1px;">88,8%</div>
+      <div style="font-size:11px;color:#aaa;margin-top:4px;">720 de 811 sesiones</div>
+    </div>
+  </div>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px;margin-bottom:24px;">
+    <div style="background:#fff;border-radius:12px;padding:24px;box-shadow:0 2px 12px rgba(0,0,0,.07);">
+      <h2 style="font-size:15px;font-weight:700;color:#1a1a2e;margin:0 0 18px;padding-left:10px;border-left:3px solid #1B4F8A;">Distribución de Tráfico</h2>
+      <canvas id="chartCanalOcup-nov" height="220"></canvas>
+    </div>
+    <div style="background:#fff;border-radius:12px;padding:24px;box-shadow:0 2px 12px rgba(0,0,0,.07);">
+      <h2 style="font-size:15px;font-weight:700;color:#1a1a2e;margin:0 0 18px;padding-left:10px;border-left:3px solid #1B4F8A;">Performance por Campaña</h2>
+      <table style="width:100%;border-collapse:collapse;font-size:12.5px;">
+        <thead><tr><th style="text-align:left;">Campaña</th><th style="text-align:right;">Sesiones</th><th style="text-align:right;">Rebote</th></tr></thead>
+        <tbody>
+<tr style="border-bottom:1px solid #f0f2f8;"><td style="padding:8px 10px;"><strong>B2B - Exámenes ocupacionales</strong></td><td style="text-align:right;padding:8px 10px;font-weight:700;">217</td><td style="text-align:right;padding:8px 10px;">40,1%</td></tr>
+<tr style="border-bottom:1px solid #f0f2f8;"><td style="padding:8px 10px;"><strong>B2B - Exámenes preocupacionales</strong></td><td style="text-align:right;padding:8px 10px;font-weight:700;">159</td><td style="text-align:right;padding:8px 10px;">37,1%</td></tr>
+<tr style="border-bottom:1px solid #f0f2f8;"><td style="padding:8px 10px;"><strong>B2B - Salud Ocup. Genérica</strong></td><td style="text-align:right;padding:8px 10px;font-weight:700;">104</td><td style="text-align:right;padding:8px 10px;">50,0%</td></tr>
+<tr style="border-bottom:1px solid #f0f2f8;"><td style="padding:8px 10px;"><strong>B2B - Evaluaciones Psico.</strong></td><td style="text-align:right;padding:8px 10px;font-weight:700;">94</td><td style="text-align:right;padding:8px 10px;">50,0%</td></tr>
+<tr style="border-bottom:1px solid #f0f2f8;"><td style="padding:8px 10px;"><strong>B2B - Display ocupacional</strong></td><td style="text-align:right;padding:8px 10px;font-weight:700;">128</td><td style="text-align:right;padding:8px 10px;color:#c0392b;">78,1%</td></tr>
+<tr style=""><td style="padding:8px 10px;">(organic)</td><td style="text-align:right;padding:8px 10px;font-weight:700;">28</td><td style="text-align:right;padding:8px 10px;">39,3%</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px;margin-bottom:24px;">
+    <div style="background:#fff;border-radius:12px;padding:24px;box-shadow:0 2px 12px rgba(0,0,0,.07);">
+      <h2 style="font-size:15px;font-weight:700;color:#1a1a2e;margin:0 0 18px;padding-left:10px;border-left:3px solid #00B4D8;">Páginas Más Visitadas</h2>
+      <canvas id="chartPaginasOcup-nov" height="200"></canvas>
+    </div>
+    <div style="background:#fff;border-radius:12px;padding:24px;box-shadow:0 2px 12px rgba(0,0,0,.07);">
+      <h2 style="font-size:15px;font-weight:700;color:#1a1a2e;margin:0 0 4px;padding-left:10px;border-left:3px solid #2ECC71;">Embudo de Conversión — Formulario</h2>
+      <p style="font-size:12px;color:#888;margin:0 0 18px;padding-left:14px;">De sesión a lead enviado (usuarios por evento)</p>
+        <div style="margin-bottom:14px;">
+          <div style="display:flex;justify-content:space-between;margin-bottom:4px;">
+            <span style="font-size:12.5px;font-weight:600;color:#333;">Sesiones totales</span>
+            <span style="font-size:12.5px;font-weight:700;color:#1B4F8A;">811 <span style="color:#aaa;font-weight:400;">(100,0%)</span></span>
+          </div>
+          <div style="background:#f0f2f8;border-radius:4px;height:10px;overflow:hidden;">
+            <div style="height:100%;width:100%;background:#1B4F8A;border-radius:4px;transition:width .6s;"></div>
+          </div>
+        </div>
+        <div style="margin-bottom:14px;">
+          <div style="display:flex;justify-content:space-between;margin-bottom:4px;">
+            <span style="font-size:12.5px;font-weight:600;color:#333;">Iniciaron formulario</span>
+            <span style="font-size:12.5px;font-weight:700;color:#00B4D8;">38 <span style="color:#aaa;font-weight:400;">(4,7%)</span></span>
+          </div>
+          <div style="background:#f0f2f8;border-radius:4px;height:10px;overflow:hidden;">
+            <div style="height:100%;width:4.7%;background:#00B4D8;border-radius:4px;transition:width .6s;"></div>
+          </div>
+        </div>
+        <div style="margin-bottom:14px;">
+          <div style="display:flex;justify-content:space-between;margin-bottom:4px;">
+            <span style="font-size:12.5px;font-weight:600;color:#333;">Completaron pasos</span>
+            <span style="font-size:12.5px;font-weight:700;color:#F39C12;">25 <span style="color:#aaa;font-weight:400;">(3,1%)</span></span>
+          </div>
+          <div style="background:#f0f2f8;border-radius:4px;height:10px;overflow:hidden;">
+            <div style="height:100%;width:3.1%;background:#F39C12;border-radius:4px;transition:width .6s;"></div>
+          </div>
+        </div>
+        <div style="margin-bottom:14px;">
+          <div style="display:flex;justify-content:space-between;margin-bottom:4px;">
+            <span style="font-size:12.5px;font-weight:600;color:#333;">Formulario enviado ✓</span>
+            <span style="font-size:12.5px;font-weight:700;color:#2ECC71;">16 <span style="color:#aaa;font-weight:400;">(2,0%)</span></span>
+          </div>
+          <div style="background:#f0f2f8;border-radius:4px;height:10px;overflow:hidden;">
+            <div style="height:100%;width:2.0%;background:#2ECC71;border-radius:4px;transition:width .6s;"></div>
+          </div>
+        </div>
+      <div style="background:#E8F8F1;border-radius:8px;padding:12px 14px;margin-top:16px;text-align:center;">
+        <div style="font-size:11px;color:#1a8c4e;font-weight:700;text-transform:uppercase;letter-spacing:0.5px;">Tasa de conversión a lead</div>
+        <div style="font-size:28px;font-weight:900;color:#1a8c4e;margin-top:2px;">2,0%</div>
+        <div style="font-size:11px;color:#888;margin-top:2px;">16 leads de 811 sesiones</div>
+      </div>
+    </div>
+  </div>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:20px;margin-bottom:24px;">
+    <div style="background:#fff;border-radius:12px;padding:24px;box-shadow:0 2px 12px rgba(0,0,0,.07);">
+      <h2 style="font-size:15px;font-weight:700;color:#1a1a2e;margin:0 0 18px;padding-left:10px;border-left:3px solid #9B59B6;">Distribución Geográfica</h2>
+      <canvas id="chartGeoOcup-nov" height="200"></canvas>
+    </div>
+    <div style="background:#fff;border-radius:12px;padding:24px;box-shadow:0 2px 12px rgba(0,0,0,.07);">
+      <h2 style="font-size:15px;font-weight:700;color:#1a1a2e;margin:0 0 18px;padding-left:10px;border-left:3px solid #E67E22;">Dispositivos</h2>
+      <canvas id="chartBrowserOcup-nov" height="200"></canvas>
+    </div>
+  </div>
+</div>
+<footer style="background:#0f2d5c;color:rgba(255,255,255,0.5);text-align:center;padding:16px;font-size:12px;">
+  Período: 1–17 Nov 2026 &nbsp;·&nbsp; Fuente: Google Analytics 4 &nbsp;·&nbsp; Blanco Salud — Salud Ocupacional
+</footer>
+</div>
+<div id="page-googleads-b2b-nov" class="month-page" style="display:none;">
+<header class="header">
+  <div class="header-left">
+    <div class="logo-box"><img data-logo src="" alt="Blanco Salud" style="height:52px;object-fit:contain;display:block;"></div>
+    <div style="display:flex;flex-direction:column;gap:3px;">
+      <h1 style="font-size:21px;font-weight:700;color:#fff;letter-spacing:-0.3px;margin:0;line-height:1.2;">Google Ads B2B — Salud Ocupacional</h1>
+      <p style="font-size:13px;color:rgba(255,255,255,0.72);margin:0;font-weight:400;letter-spacing:0.2px;">Performance campañas B2B — 1 al 17 Noviembre 2026</p>
+    </div>
+  </div>
+  <div class="header-right">
+    <div class="badge-period">1 – 17 Noviembre 2026</div>
+    <div class="badge-source">Fuente: Google Ads</div>
+  </div>
+</header>
+<div style="max-width:1300px;margin:0 auto;padding:28px 32px;overflow-x:hidden;">
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:16px;margin-bottom:24px;">
+  <div style="background:#fff;border-radius:12px;padding:20px;box-shadow:0 2px 12px rgba(0,0,0,.07);border-top:3px solid #1B4F8A;text-align:center;">
+    <div style="font-size:11px;font-weight:700;color:#888;text-transform:uppercase;letter-spacing:1px;margin-bottom:8px;">Inversión B2B</div>
+    <div style="font-size:26px;font-weight:800;color:#1B4F8A;">$330.003</div>
+    <div style="font-size:11px;color:#888;margin-top:4px;">CLP</div>
+  </div><div style="background:#fff;border-radius:12px;padding:20px;box-shadow:0 2px 12px rgba(0,0,0,.07);border-top:3px solid #00B4D8;text-align:center;">
+    <div style="font-size:11px;font-weight:700;color:#888;text-transform:uppercase;letter-spacing:1px;margin-bottom:8px;">Clics B2B</div>
+    <div style="font-size:26px;font-weight:800;color:#00B4D8;">856</div>
+    <div style="font-size:11px;color:#888;margin-top:4px;">búsqueda + display</div>
+  </div><div style="background:#fff;border-radius:12px;padding:20px;box-shadow:0 2px 12px rgba(0,0,0,.07);border-top:3px solid #2ECC71;text-align:center;">
+    <div style="font-size:11px;font-weight:700;color:#888;text-transform:uppercase;letter-spacing:1px;margin-bottom:8px;">CTR búsqueda</div>
+    <div style="font-size:26px;font-weight:800;color:#2ECC71;">8,3%</div>
+    <div style="font-size:11px;color:#888;margin-top:4px;">promedio B2B</div>
+  </div><div style="background:#fff;border-radius:12px;padding:20px;box-shadow:0 2px 12px rgba(0,0,0,.07);border-top:3px solid #F39C12;text-align:center;">
+    <div style="font-size:11px;font-weight:700;color:#888;text-transform:uppercase;letter-spacing:1px;margin-bottom:8px;">Conversiones</div>
+    <div style="font-size:26px;font-weight:800;color:#F39C12;">37</div>
+    <div style="font-size:11px;color:#888;margin-top:4px;">formularios B2B (Google Ads)</div>
+  </div><div style="background:#fff;border-radius:12px;padding:20px;box-shadow:0 2px 12px rgba(0,0,0,.07);border-top:3px solid #9B59B6;text-align:center;">
+    <div style="font-size:11px;font-weight:700;color:#888;text-transform:uppercase;letter-spacing:1px;margin-bottom:8px;">CPA Promedio</div>
+    <div style="font-size:26px;font-weight:800;color:#9B59B6;">$8.919</div>
+    <div style="font-size:11px;color:#888;margin-top:4px;">CLP</div>
+  </div>
+</div>
+<div style="background:#fff;border-radius:12px;padding:24px;box-shadow:0 2px 12px rgba(0,0,0,.07);margin-bottom:24px;">
+  <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:16px;padding:12px 16px;background:#F4F7FB;border-radius:10px;border:1px solid #E2E8F2;">
+    <span style="font-size:12px;font-weight:700;color:#1B4F8A;">📅 Filtrar período:</span>
+    <label style="font-size:12px;color:#6B7A99;font-weight:600;">Desde</label>
+    <input type="date" id="dateStart-nov" value="2026-11-01" min="2026-11-01" max="2026-11-17" onchange="applyDateFilterM('nov')" style="border:1px solid #E2E8F2;border-radius:6px;padding:4px 8px;font-size:12px;color:#1A2340;cursor:pointer;background:#fff;">
+    <label style="font-size:12px;color:#6B7A99;font-weight:600;">Hasta</label>
+    <input type="date" id="dateEnd-nov" value="2026-11-17" min="2026-11-01" max="2026-11-17" onchange="applyDateFilterM('nov')" style="border:1px solid #E2E8F2;border-radius:6px;padding:4px 8px;font-size:12px;color:#1A2340;cursor:pointer;background:#fff;">
+    <button onclick="document.getElementById('dateStart-nov').value='2026-11-01';document.getElementById('dateEnd-nov').value='2026-11-17';applyDateFilterM('nov');" style="background:#E2E8F2;border:none;border-radius:6px;color:#1B4F8A;padding:5px 12px;font-size:11px;font-weight:700;cursor:pointer;">Reset</button>
+    <span style="font-size:11px;color:#95A5A6;margin-left:4px;">· Afecta ambos gráficos de gasto diario</span>
+  </div>
+  <h2 style="font-size:15px;font-weight:700;color:#1a1a2e;margin:0 0 18px;padding-left:10px;border-left:4px solid #1B4F8A;">Gasto diario B2B y CPC — Noviembre 2026 (1–17)</h2>
+  <canvas id="chartGadsTimelineB2B-nov" height="100"></canvas>
+</div>
+<div style="background:#fff;border-radius:12px;padding:24px;box-shadow:0 2px 12px rgba(0,0,0,.07);margin-bottom:24px;">
+  <h2 style="font-size:15px;font-weight:700;color:#1a1a2e;margin:0 0 18px;padding-left:10px;border-left:4px solid #00B4D8;">B2B — Salud Ocupacional</h2>
+  <div style="overflow-x:auto;">
+  <table style="width:100%;border-collapse:collapse;font-size:12.5px;">
+    <thead><tr>
+      <th style="text-align:left;width:38%;">Campaña + Keywords top <span style="font-size:10px;font-weight:400;color:rgba(255,255,255,0.65);">(c = clics en el período)</span></th>
+      <th style="text-align:right;">Impr.</th><th style="text-align:right;">Clics</th><th style="text-align:right;">CTR</th>
+      <th style="text-align:right;">Inversión</th><th style="text-align:right;">Conv.</th><th style="text-align:right;">CPA</th>
+    </tr></thead>
+    <tbody><tr style="border-bottom:1px solid #f0f2f8;">
+      <td style="padding:10px 12px;">
+        <strong style="font-size:12.5px;">Salud Ocup. Genérica</strong>
+        <div style="margin-top:5px;"><span style="display:inline-block;background:#EBF3FF;color:#1B4F8A;border-radius:12px;padding:2px 10px;font-size:11px;margin:2px 3px 2px 0;">examenes fisicos laborales <span style="color:#888;">(23c)</span></span><span style="display:inline-block;background:#EBF3FF;color:#1B4F8A;border-radius:12px;padding:2px 10px;font-size:11px;margin:2px 3px 2px 0;">[examen preocupacional] <span style="color:#888;">(23c)</span></span><span style="display:inline-block;background:#EBF3FF;color:#1B4F8A;border-radius:12px;padding:2px 10px;font-size:11px;margin:2px 3px 2px 0;">exámenes médicos laborales <span style="color:#888;">(22c)</span></span><span style="display:inline-block;background:#EBF3FF;color:#1B4F8A;border-radius:12px;padding:2px 10px;font-size:11px;margin:2px 3px 2px 0;">"salud ocupacional para empresas" <span style="color:#888;">(13c)</span></span></div>
+      </td>
+      <td style="text-align:right;padding:10px 12px;font-size:12.5px;">1.954</td>
+      <td style="text-align:right;padding:10px 12px;font-size:12.5px;font-weight:700;">143</td>
+      <td style="text-align:right;padding:10px 12px;font-size:12.5px;">7,3%</td>
+      <td style="text-align:right;padding:10px 12px;font-size:12.5px;font-weight:700;">$67.172</td>
+      <td style="text-align:right;padding:10px 12px;font-size:12.5px;font-weight:700;color:#1a8c4e;">3</td>
+      <td style="text-align:right;padding:10px 12px;font-size:12.5px;color:#555;">$22.391</td>
+    </tr><tr style="border-bottom:1px solid #f0f2f8;">
+      <td style="padding:10px 12px;">
+        <strong style="font-size:12.5px;">Exámenes ocupacionales</strong>
+        <div style="margin-top:5px;"><span style="display:inline-block;background:#EBF3FF;color:#1B4F8A;border-radius:12px;padding:2px 10px;font-size:11px;margin:2px 3px 2px 0;">examen ocupacional altura física <span style="color:#888;">(102c)</span></span><span style="display:inline-block;background:#EBF3FF;color:#1B4F8A;border-radius:12px;padding:2px 10px;font-size:11px;margin:2px 3px 2px 0;">exámenes ocupacionales <span style="color:#888;">(37c)</span></span><span style="display:inline-block;background:#EBF3FF;color:#1B4F8A;border-radius:12px;padding:2px 10px;font-size:11px;margin:2px 3px 2px 0;">examenes laborales <span style="color:#888;">(37c)</span></span><span style="display:inline-block;background:#EBF3FF;color:#1B4F8A;border-radius:12px;padding:2px 10px;font-size:11px;margin:2px 3px 2px 0;">examen gran altura geográfica <span style="color:#888;">(27c)</span></span></div>
+      </td>
+      <td style="text-align:right;padding:10px 12px;font-size:12.5px;">2.541</td>
+      <td style="text-align:right;padding:10px 12px;font-size:12.5px;font-weight:700;">253</td>
+      <td style="text-align:right;padding:10px 12px;font-size:12.5px;">10,0%</td>
+      <td style="text-align:right;padding:10px 12px;font-size:12.5px;font-weight:700;">$112.848</td>
+      <td style="text-align:right;padding:10px 12px;font-size:12.5px;font-weight:700;color:#1a8c4e;">17,5</td>
+      <td style="text-align:right;padding:10px 12px;font-size:12.5px;color:#555;">$6.448</td>
+    </tr><tr style="border-bottom:1px solid #f0f2f8;">
+      <td style="padding:10px 12px;">
+        <strong style="font-size:12.5px;">Exámenes preocupacionales</strong>
+        <div style="margin-top:5px;"><span style="display:inline-block;background:#EBF3FF;color:#1B4F8A;border-radius:12px;padding:2px 10px;font-size:11px;margin:2px 3px 2px 0;">exámenes preocupacionales <span style="color:#888;">(55c)</span></span><span style="display:inline-block;background:#EBF3FF;color:#1B4F8A;border-radius:12px;padding:2px 10px;font-size:11px;margin:2px 3px 2px 0;">examen preocupacional <span style="color:#888;">(41c)</span></span><span style="display:inline-block;background:#EBF3FF;color:#1B4F8A;border-radius:12px;padding:2px 10px;font-size:11px;margin:2px 3px 2px 0;">examen pre ocupacional <span style="color:#888;">(37c)</span></span><span style="display:inline-block;background:#EBF3FF;color:#1B4F8A;border-radius:12px;padding:2px 10px;font-size:11px;margin:2px 3px 2px 0;">evaluaciones preocupacionales <span style="color:#888;">(25c)</span></span></div>
+      </td>
+      <td style="text-align:right;padding:10px 12px;font-size:12.5px;">2.161</td>
+      <td style="text-align:right;padding:10px 12px;font-size:12.5px;font-weight:700;">194</td>
+      <td style="text-align:right;padding:10px 12px;font-size:12.5px;">9,0%</td>
+      <td style="text-align:right;padding:10px 12px;font-size:12.5px;font-weight:700;">$91.707</td>
+      <td style="text-align:right;padding:10px 12px;font-size:12.5px;font-weight:700;color:#1a8c4e;">15,5</td>
+      <td style="text-align:right;padding:10px 12px;font-size:12.5px;color:#555;">$5.917</td>
+    </tr><tr style="border-bottom:1px solid #f0f2f8;">
+      <td style="padding:10px 12px;">
+        <strong style="font-size:12.5px;">Evaluaciones Psico.</strong>
+        <div style="margin-top:5px;"><span style="display:inline-block;background:#EBF3FF;color:#1B4F8A;border-radius:12px;padding:2px 10px;font-size:11px;margin:2px 3px 2px 0;">[examen psicosensotécnico] <span style="color:#888;">(34c)</span></span><span style="display:inline-block;background:#EBF3FF;color:#1B4F8A;border-radius:12px;padding:2px 10px;font-size:11px;margin:2px 3px 2px 0;">examen de aversión al riesgo <span style="color:#888;">(20c)</span></span><span style="display:inline-block;background:#EBF3FF;color:#1B4F8A;border-radius:12px;padding:2px 10px;font-size:11px;margin:2px 3px 2px 0;">evaluación psicológica laboral <span style="color:#888;">(20c)</span></span><span style="display:inline-block;background:#EBF3FF;color:#1B4F8A;border-radius:12px;padding:2px 10px;font-size:11px;margin:2px 3px 2px 0;">evaluaciones psicosensotécnicas <span style="color:#888;">(14c)</span></span></div>
+      </td>
+      <td style="text-align:right;padding:10px 12px;font-size:12.5px;">1.920</td>
+      <td style="text-align:right;padding:10px 12px;font-size:12.5px;font-weight:700;">122</td>
+      <td style="text-align:right;padding:10px 12px;font-size:12.5px;">6,4%</td>
+      <td style="text-align:right;padding:10px 12px;font-size:12.5px;font-weight:700;">$29.040</td>
+      <td style="text-align:right;padding:10px 12px;font-size:12.5px;font-weight:700;color:#1a8c4e;">1</td>
+      <td style="text-align:right;padding:10px 12px;font-size:12.5px;color:#555;">$29.040</td>
+    </tr><tr style="border-bottom:1px solid #f0f2f8;background:#FAFBFF;">
+      <td style="padding:10px 12px;">
+        <strong style="font-size:12.5px;">Display ocupacional</strong>
+        <div style="margin-top:5px;"><span style="font-size:11px;color:#aaa;">Sin keywords (Display)</span></div>
+      </td>
+      <td style="text-align:right;padding:10px 12px;font-size:12.5px;">203.027</td>
+      <td style="text-align:right;padding:10px 12px;font-size:12.5px;font-weight:700;">144</td>
+      <td style="text-align:right;padding:10px 12px;font-size:12.5px;">0,1%</td>
+      <td style="text-align:right;padding:10px 12px;font-size:12.5px;font-weight:700;">$29.236</td>
+      <td style="text-align:right;padding:10px 12px;font-size:12.5px;font-weight:700;color:#888;">0</td>
+      <td style="text-align:right;padding:10px 12px;font-size:12.5px;color:#555;">—</td>
+    </tr></tbody>
+    <tfoot><tr style="background:#EBF3FF;border-top:2px solid #1B4F8A;">
+        <td style="padding:10px 12px;font-size:12.5px;font-weight:700;color:#1a1a2e;">Total B2B <span style="font-size:10px;font-weight:400;color:#888;"></span></td>
+        <td style="text-align:right;padding:10px 12px;font-size:12.5px;font-weight:700;">211.603</td>
+        <td style="text-align:right;padding:10px 12px;font-size:12.5px;font-weight:700;">856</td>
+        <td style="text-align:right;padding:10px 12px;font-size:12.5px;font-weight:700;">—</td>
+        <td style="text-align:right;padding:10px 12px;font-size:12.5px;font-weight:700;">$330.003</td>
+        <td style="text-align:right;padding:10px 12px;font-size:12.5px;font-weight:700;color:#1a8c4e;">37</td>
+        <td style="text-align:right;padding:10px 12px;font-size:12.5px;font-weight:700;color:#555;">$8.919</td>
+      </tr></tfoot>
+  </table>
+  </div>
+  <p style="font-size:11px;color:#888;margin:12px 0 0;">Conv. B2B = conversiones registradas en Google Ads (formularios).</p>
+</div>
+</div>
+<div style="max-width:1300px;margin:0 auto;padding:0 32px 24px;font-size:12px;color:#888;text-align:center;">Período: 1–17 Nov 2026 &nbsp;·&nbsp; Fuente: Google Ads &nbsp;·&nbsp; Blanco Salud</div>
+</div>
+<div id="page-googleads-b2c-nov" class="month-page" style="display:none;">
+<header class="header">
+  <div class="header-left">
+    <div class="logo-box"><img data-logo src="" alt="Blanco Salud" style="height:52px;object-fit:contain;display:block;"></div>
+    <div style="display:flex;flex-direction:column;gap:3px;">
+      <h1 style="font-size:21px;font-weight:700;color:#fff;letter-spacing:-0.3px;margin:0;line-height:1.2;">Google Ads B2C — Imagenología</h1>
+      <p style="font-size:13px;color:rgba(255,255,255,0.72);margin:0;font-weight:400;letter-spacing:0.2px;">Performance campañas B2C — 1 al 17 Noviembre 2026</p>
+    </div>
+  </div>
+  <div class="header-right">
+    <div class="badge-period">1 – 17 Noviembre 2026</div>
+    <div class="badge-source">Fuente: Google Ads</div>
+  </div>
+</header>
+<div style="max-width:1300px;margin:0 auto;padding:28px 32px;overflow-x:hidden;">
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:16px;margin-bottom:24px;">
+  <div style="background:#fff;border-radius:12px;padding:20px;box-shadow:0 2px 12px rgba(0,0,0,.07);border-top:3px solid #1B4F8A;text-align:center;">
+    <div style="font-size:11px;font-weight:700;color:#888;text-transform:uppercase;letter-spacing:1px;margin-bottom:8px;">Inversión B2C</div>
+    <div style="font-size:26px;font-weight:800;color:#1B4F8A;">$664.532</div>
+    <div style="font-size:11px;color:#888;margin-top:4px;">CLP</div>
+  </div><div style="background:#fff;border-radius:12px;padding:20px;box-shadow:0 2px 12px rgba(0,0,0,.07);border-top:3px solid #00B4D8;text-align:center;">
+    <div style="font-size:11px;font-weight:700;color:#888;text-transform:uppercase;letter-spacing:1px;margin-bottom:8px;">Clics B2C</div>
+    <div style="font-size:26px;font-weight:800;color:#00B4D8;">6.849</div>
+    <div style="font-size:11px;color:#888;margin-top:4px;">búsqueda</div>
+  </div><div style="background:#fff;border-radius:12px;padding:20px;box-shadow:0 2px 12px rgba(0,0,0,.07);border-top:3px solid #2ECC71;text-align:center;">
+    <div style="font-size:11px;font-weight:700;color:#888;text-transform:uppercase;letter-spacing:1px;margin-bottom:8px;">CTR búsqueda</div>
+    <div style="font-size:26px;font-weight:800;color:#2ECC71;">9,9%</div>
+    <div style="font-size:11px;color:#888;margin-top:4px;">promedio B2C</div>
+  </div><div style="background:#fff;border-radius:12px;padding:20px;box-shadow:0 2px 12px rgba(0,0,0,.07);border-top:3px solid #F39C12;text-align:center;">
+    <div style="font-size:11px;font-weight:700;color:#888;text-transform:uppercase;letter-spacing:1px;margin-bottom:8px;">Conversiones</div>
+    <div style="font-size:26px;font-weight:800;color:#F39C12;">400</div>
+    <div style="font-size:11px;color:#888;margin-top:4px;">agendamientos (paso 8 GA4)</div>
+  </div><div style="background:#fff;border-radius:12px;padding:20px;box-shadow:0 2px 12px rgba(0,0,0,.07);border-top:3px solid #9B59B6;text-align:center;">
+    <div style="font-size:11px;font-weight:700;color:#888;text-transform:uppercase;letter-spacing:1px;margin-bottom:8px;">CPA Promedio</div>
+    <div style="font-size:26px;font-weight:800;color:#9B59B6;">$1.661</div>
+    <div style="font-size:11px;color:#888;margin-top:4px;">CLP · campañas de búsqueda</div>
+  </div>
+</div>
+<div style="background:#fff;border-radius:12px;padding:24px;box-shadow:0 2px 12px rgba(0,0,0,.07);margin-bottom:24px;">
+  
+  <h2 style="font-size:15px;font-weight:700;color:#1a1a2e;margin:0 0 18px;padding-left:10px;border-left:4px solid #1B4F8A;">Gasto diario B2C y CPC — Noviembre 2026 (1–17)</h2>
+  <canvas id="chartGadsTimelineB2C-nov" height="100"></canvas>
+</div>
+<div style="background:#fff;border-radius:12px;padding:24px;box-shadow:0 2px 12px rgba(0,0,0,.07);margin-bottom:24px;">
+  <h2 style="font-size:15px;font-weight:700;color:#1a1a2e;margin:0 0 18px;padding-left:10px;border-left:4px solid #1B4F8A;">B2C — Imagenología</h2>
+  <div style="overflow-x:auto;">
+  <table style="width:100%;border-collapse:collapse;font-size:12.5px;">
+    <thead><tr>
+      <th style="text-align:left;width:38%;">Campaña + Keywords top <span style="font-size:10px;font-weight:400;color:rgba(255,255,255,0.65);">(c = clics en el período)</span></th>
+      <th style="text-align:right;">Impr.</th><th style="text-align:right;">Clics</th><th style="text-align:right;">CTR</th>
+      <th style="text-align:right;">Inversión</th><th style="text-align:right;">Conv.</th><th style="text-align:right;">CPA</th>
+    </tr></thead>
+    <tbody><tr style="border-bottom:1px solid #f0f2f8;">
+      <td style="padding:10px 12px;">
+        <strong style="font-size:12.5px;">Laboratorio + muestras</strong>
+        <div style="margin-top:5px;"><span style="display:inline-block;background:#EBF3FF;color:#1B4F8A;border-radius:12px;padding:2px 10px;font-size:11px;margin:2px 3px 2px 0;">laboratorio clínico cerca de mí <span style="color:#888;">(648c)</span></span><span style="display:inline-block;background:#EBF3FF;color:#1B4F8A;border-radius:12px;padding:2px 10px;font-size:11px;margin:2px 3px 2px 0;">examenes de laboratorio precio <span style="color:#888;">(500c)</span></span><span style="display:inline-block;background:#EBF3FF;color:#1B4F8A;border-radius:12px;padding:2px 10px;font-size:11px;margin:2px 3px 2px 0;">examenes de laboratorio particular <span style="color:#888;">(487c)</span></span><span style="display:inline-block;background:#EBF3FF;color:#1B4F8A;border-radius:12px;padding:2px 10px;font-size:11px;margin:2px 3px 2px 0;">examenes de laboratorio Fonasa <span style="color:#888;">(200c)</span></span></div>
+      </td>
+      <td style="text-align:right;padding:10px 12px;font-size:12.5px;">9.098</td>
+      <td style="text-align:right;padding:10px 12px;font-size:12.5px;font-weight:700;">2.611</td>
+      <td style="text-align:right;padding:10px 12px;font-size:12.5px;">28,7%</td>
+      <td style="text-align:right;padding:10px 12px;font-size:12.5px;font-weight:700;">$88.155</td>
+      <td style="text-align:right;padding:10px 12px;font-size:12.5px;font-weight:700;color:#1a8c4e;">191</td>
+      <td style="text-align:right;padding:10px 12px;font-size:12.5px;color:#555;">$462</td>
+    </tr><tr style="border-bottom:1px solid #f0f2f8;">
+      <td style="padding:10px 12px;">
+        <strong style="font-size:12.5px;">Resonancia RM — Providencia, SC y Ñuñoa</strong>
+        <div style="margin-top:5px;"><span style="display:inline-block;background:#EBF3FF;color:#1B4F8A;border-radius:12px;padding:2px 10px;font-size:11px;margin:2px 3px 2px 0;">resonancia magnetica <span style="color:#888;">(148c)</span></span><span style="display:inline-block;background:#EBF3FF;color:#1B4F8A;border-radius:12px;padding:2px 10px;font-size:11px;margin:2px 3px 2px 0;">resonancia magnetica valor <span style="color:#888;">(145c)</span></span><span style="display:inline-block;background:#EBF3FF;color:#1B4F8A;border-radius:12px;padding:2px 10px;font-size:11px;margin:2px 3px 2px 0;">resonancia magnetica precio <span style="color:#888;">(113c)</span></span><span style="display:inline-block;background:#EBF3FF;color:#1B4F8A;border-radius:12px;padding:2px 10px;font-size:11px;margin:2px 3px 2px 0;">resonancia rodilla <span style="color:#888;">(109c)</span></span></div>
+      </td>
+      <td style="text-align:right;padding:10px 12px;font-size:12.5px;">12.069</td>
+      <td style="text-align:right;padding:10px 12px;font-size:12.5px;font-weight:700;">976</td>
+      <td style="text-align:right;padding:10px 12px;font-size:12.5px;">8,1%</td>
+      <td style="text-align:right;padding:10px 12px;font-size:12.5px;font-weight:700;">$114.453</td>
+      <td style="text-align:right;padding:10px 12px;font-size:12.5px;font-weight:700;color:#1a8c4e;">42</td>
+      <td style="text-align:right;padding:10px 12px;font-size:12.5px;color:#555;">$2.725</td>
+    </tr><tr style="border-bottom:1px solid #f0f2f8;">
+      <td style="padding:10px 12px;">
+        <strong style="font-size:12.5px;">Resonancia RM — Las Condes y Vitacura</strong>
+        <div style="margin-top:5px;"><span style="display:inline-block;background:#EBF3FF;color:#1B4F8A;border-radius:12px;padding:2px 10px;font-size:11px;margin:2px 3px 2px 0;">resonancia magnetica <span style="color:#888;">(64c)</span></span><span style="display:inline-block;background:#EBF3FF;color:#1B4F8A;border-radius:12px;padding:2px 10px;font-size:11px;margin:2px 3px 2px 0;">resonancia rodilla <span style="color:#888;">(55c)</span></span><span style="display:inline-block;background:#EBF3FF;color:#1B4F8A;border-radius:12px;padding:2px 10px;font-size:11px;margin:2px 3px 2px 0;">resonancia magnetica valor <span style="color:#888;">(53c)</span></span><span style="display:inline-block;background:#EBF3FF;color:#1B4F8A;border-radius:12px;padding:2px 10px;font-size:11px;margin:2px 3px 2px 0;">resonancia magnetica precio <span style="color:#888;">(40c)</span></span></div>
+      </td>
+      <td style="text-align:right;padding:10px 12px;font-size:12.5px;">4.372</td>
+      <td style="text-align:right;padding:10px 12px;font-size:12.5px;font-weight:700;">381</td>
+      <td style="text-align:right;padding:10px 12px;font-size:12.5px;">8,7%</td>
+      <td style="text-align:right;padding:10px 12px;font-size:12.5px;font-weight:700;">$47.638</td>
+      <td style="text-align:right;padding:10px 12px;font-size:12.5px;font-weight:700;color:#1a8c4e;">12</td>
+      <td style="text-align:right;padding:10px 12px;font-size:12.5px;color:#555;">$3.970</td>
+    </tr><tr style="border-bottom:1px solid #f0f2f8;">
+      <td style="padding:10px 12px;">
+        <strong style="font-size:12.5px;">Resonancia RM — Maipú, Cerrillos y Pudahuel</strong>
+        <div style="margin-top:5px;"><span style="display:inline-block;background:#EBF3FF;color:#1B4F8A;border-radius:12px;padding:2px 10px;font-size:11px;margin:2px 3px 2px 0;">resonancia magnetica valor <span style="color:#888;">(47c)</span></span><span style="display:inline-block;background:#EBF3FF;color:#1B4F8A;border-radius:12px;padding:2px 10px;font-size:11px;margin:2px 3px 2px 0;">resonancia magnetica precio <span style="color:#888;">(45c)</span></span><span style="display:inline-block;background:#EBF3FF;color:#1B4F8A;border-radius:12px;padding:2px 10px;font-size:11px;margin:2px 3px 2px 0;">resonancia magnetica <span style="color:#888;">(42c)</span></span><span style="display:inline-block;background:#EBF3FF;color:#1B4F8A;border-radius:12px;padding:2px 10px;font-size:11px;margin:2px 3px 2px 0;">resonancia rodilla <span style="color:#888;">(37c)</span></span></div>
+      </td>
+      <td style="text-align:right;padding:10px 12px;font-size:12.5px;">4.040</td>
+      <td style="text-align:right;padding:10px 12px;font-size:12.5px;font-weight:700;">353</td>
+      <td style="text-align:right;padding:10px 12px;font-size:12.5px;">8,7%</td>
+      <td style="text-align:right;padding:10px 12px;font-size:12.5px;font-weight:700;">$44.987</td>
+      <td style="text-align:right;padding:10px 12px;font-size:12.5px;font-weight:700;color:#1a8c4e;">3</td>
+      <td style="text-align:right;padding:10px 12px;font-size:12.5px;color:#555;">$14.996</td>
+    </tr><tr style="border-bottom:1px solid #f0f2f8;">
+      <td style="padding:10px 12px;">
+        <strong style="font-size:12.5px;">Mamografía</strong>
+        <div style="margin-top:5px;"><span style="display:inline-block;background:#EBF3FF;color:#1B4F8A;border-radius:12px;padding:2px 10px;font-size:11px;margin:2px 3px 2px 0;">mamografía y ecografía de mama <span style="color:#888;">(66c)</span></span><span style="display:inline-block;background:#EBF3FF;color:#1B4F8A;border-radius:12px;padding:2px 10px;font-size:11px;margin:2px 3px 2px 0;">mamografía y ecografía mamaria <span style="color:#888;">(45c)</span></span><span style="display:inline-block;background:#EBF3FF;color:#1B4F8A;border-radius:12px;padding:2px 10px;font-size:11px;margin:2px 3px 2px 0;">mamografía Maipú <span style="color:#888;">(39c)</span></span><span style="display:inline-block;background:#EBF3FF;color:#1B4F8A;border-radius:12px;padding:2px 10px;font-size:11px;margin:2px 3px 2px 0;">mamografía sin orden médica <span style="color:#888;">(36c)</span></span></div>
+      </td>
+      <td style="text-align:right;padding:10px 12px;font-size:12.5px;">8.417</td>
+      <td style="text-align:right;padding:10px 12px;font-size:12.5px;font-weight:700;">557</td>
+      <td style="text-align:right;padding:10px 12px;font-size:12.5px;">6,6%</td>
+      <td style="text-align:right;padding:10px 12px;font-size:12.5px;font-weight:700;">$90.061</td>
+      <td style="text-align:right;padding:10px 12px;font-size:12.5px;font-weight:700;color:#1a8c4e;">11</td>
+      <td style="text-align:right;padding:10px 12px;font-size:12.5px;color:#555;">$8.187</td>
+    </tr><tr style="border-bottom:1px solid #f0f2f8;">
+      <td style="padding:10px 12px;">
+        <strong style="font-size:12.5px;">TAC-Scanner</strong>
+        <div style="margin-top:5px;"><span style="display:inline-block;background:#EBF3FF;color:#1B4F8A;border-radius:12px;padding:2px 10px;font-size:11px;margin:2px 3px 2px 0;">scanner copago <span style="color:#888;">(194c)</span></span><span style="display:inline-block;background:#EBF3FF;color:#1B4F8A;border-radius:12px;padding:2px 10px;font-size:11px;margin:2px 3px 2px 0;">pedir hora tac <span style="color:#888;">(107c)</span></span><span style="display:inline-block;background:#EBF3FF;color:#1B4F8A;border-radius:12px;padding:2px 10px;font-size:11px;margin:2px 3px 2px 0;">tac fonasa <span style="color:#888;">(95c)</span></span><span style="display:inline-block;background:#EBF3FF;color:#1B4F8A;border-radius:12px;padding:2px 10px;font-size:11px;margin:2px 3px 2px 0;">tac de cerebro <span style="color:#888;">(63c)</span></span></div>
+      </td>
+      <td style="text-align:right;padding:10px 12px;font-size:12.5px;">9.868</td>
+      <td style="text-align:right;padding:10px 12px;font-size:12.5px;font-weight:700;">813</td>
+      <td style="text-align:right;padding:10px 12px;font-size:12.5px;">8,2%</td>
+      <td style="text-align:right;padding:10px 12px;font-size:12.5px;font-weight:700;">$103.413</td>
+      <td style="text-align:right;padding:10px 12px;font-size:12.5px;font-weight:700;color:#1a8c4e;">116</td>
+      <td style="text-align:right;padding:10px 12px;font-size:12.5px;color:#555;">$891</td>
+    </tr><tr style="border-bottom:1px solid #f0f2f8;">
+      <td style="padding:10px 12px;">
+        <strong style="font-size:12.5px;">Ecografía</strong>
+        <div style="margin-top:5px;"><span style="display:inline-block;background:#EBF3FF;color:#1B4F8A;border-radius:12px;padding:2px 10px;font-size:11px;margin:2px 3px 2px 0;">ecotomografía precio <span style="color:#888;">(73c)</span></span><span style="display:inline-block;background:#EBF3FF;color:#1B4F8A;border-radius:12px;padding:2px 10px;font-size:11px;margin:2px 3px 2px 0;">cuánto cuesta una ecografía <span style="color:#888;">(63c)</span></span><span style="display:inline-block;background:#EBF3FF;color:#1B4F8A;border-radius:12px;padding:2px 10px;font-size:11px;margin:2px 3px 2px 0;">eco doppler venoso <span style="color:#888;">(53c)</span></span><span style="display:inline-block;background:#EBF3FF;color:#1B4F8A;border-radius:12px;padding:2px 10px;font-size:11px;margin:2px 3px 2px 0;">ecografía abdominal precio <span style="color:#888;">(53c)</span></span></div>
+      </td>
+      <td style="text-align:right;padding:10px 12px;font-size:12.5px;">17.976</td>
+      <td style="text-align:right;padding:10px 12px;font-size:12.5px;font-weight:700;">832</td>
+      <td style="text-align:right;padding:10px 12px;font-size:12.5px;">4,6%</td>
+      <td style="text-align:right;padding:10px 12px;font-size:12.5px;font-weight:700;">$89.879</td>
+      <td style="text-align:right;padding:10px 12px;font-size:12.5px;font-weight:700;color:#1a8c4e;">5</td>
+      <td style="text-align:right;padding:10px 12px;font-size:12.5px;color:#555;">$17.976</td>
+    </tr><tr style="border-bottom:1px solid #f0f2f8;">
+      <td style="padding:10px 12px;">
+        <strong style="font-size:12.5px;">Resonancia Antofagasta</strong>
+        <div style="margin-top:5px;"><span style="display:inline-block;background:#EBF3FF;color:#1B4F8A;border-radius:12px;padding:2px 10px;font-size:11px;margin:2px 3px 2px 0;">"resonancia magnetica antofagasta" <span style="color:#888;">(57c)</span></span><span style="display:inline-block;background:#EBF3FF;color:#1B4F8A;border-radius:12px;padding:2px 10px;font-size:11px;margin:2px 3px 2px 0;">resonancia magnetica precio <span style="color:#888;">(32c)</span></span><span style="display:inline-block;background:#EBF3FF;color:#1B4F8A;border-radius:12px;padding:2px 10px;font-size:11px;margin:2px 3px 2px 0;">resonancia magnetica valor <span style="color:#888;">(28c)</span></span><span style="display:inline-block;background:#EBF3FF;color:#1B4F8A;border-radius:12px;padding:2px 10px;font-size:11px;margin:2px 3px 2px 0;">[resonancia magnetica antofagasta] <span style="color:#888;">(27c)</span></span></div>
+      </td>
+      <td style="text-align:right;padding:10px 12px;font-size:12.5px;">2.980</td>
+      <td style="text-align:right;padding:10px 12px;font-size:12.5px;font-weight:700;">286</td>
+      <td style="text-align:right;padding:10px 12px;font-size:12.5px;">9,6%</td>
+      <td style="text-align:right;padding:10px 12px;font-size:12.5px;font-weight:700;">$72.253</td>
+      <td style="text-align:right;padding:10px 12px;font-size:12.5px;font-weight:700;color:#1a8c4e;">17</td>
+      <td style="text-align:right;padding:10px 12px;font-size:12.5px;color:#555;">$4.250</td>
+    </tr><tr style="border-bottom:1px solid #f0f2f8;">
+      <td style="padding:10px 12px;">
+        <strong style="font-size:12.5px;">Resonancia Calama</strong>
+        <div style="margin-top:5px;"><span style="font-size:11px;color:#aaa;">Sin datos de keywords en el período</span></div>
+      </td>
+      <td style="text-align:right;padding:10px 12px;font-size:12.5px;">302</td>
+      <td style="text-align:right;padding:10px 12px;font-size:12.5px;font-weight:700;">40</td>
+      <td style="text-align:right;padding:10px 12px;font-size:12.5px;">13,2%</td>
+      <td style="text-align:right;padding:10px 12px;font-size:12.5px;font-weight:700;">$13.693</td>
+      <td style="text-align:right;padding:10px 12px;font-size:12.5px;font-weight:700;color:#1a8c4e;">3</td>
+      <td style="text-align:right;padding:10px 12px;font-size:12.5px;color:#555;">$4.564</td>
+    </tr></tbody>
+    <tfoot><tr style="background:#EBF3FF;border-top:2px solid #1B4F8A;">
+        <td style="padding:10px 12px;font-size:12.5px;font-weight:700;color:#1a1a2e;">Total B2C <span style="font-size:10px;font-weight:400;color:#888;">(excl. Display)</span></td>
+        <td style="text-align:right;padding:10px 12px;font-size:12.5px;font-weight:700;">69.122</td>
+        <td style="text-align:right;padding:10px 12px;font-size:12.5px;font-weight:700;">6.849</td>
+        <td style="text-align:right;padding:10px 12px;font-size:12.5px;font-weight:700;">9,9%</td>
+        <td style="text-align:right;padding:10px 12px;font-size:12.5px;font-weight:700;">$664.532</td>
+        <td style="text-align:right;padding:10px 12px;font-size:12.5px;font-weight:700;color:#1a8c4e;">400</td>
+        <td style="text-align:right;padding:10px 12px;font-size:12.5px;font-weight:700;color:#555;">$1.661</td>
+      </tr></tfoot>
+  </table>
+  </div>
+  <p style="font-size:11px;color:#888;margin:12px 0 0;">Conv. B2C = eventos confirmacion_paso8 en GA4 por campaña de la sesión. Resonancia RM Providencia suma también "Campaña Resonancia RM 2025" (nombre anterior).</p>
+</div>
+</div>
+<div style="max-width:1300px;margin:0 auto;padding:0 32px 24px;font-size:12px;color:#888;text-align:center;">Período: 1–17 Nov 2026 &nbsp;·&nbsp; Fuente: Google Ads &nbsp;·&nbsp; Blanco Salud</div>
+</div>
+<div id="page-meta-nov" class="month-page" style="display:none;">
+<header class="header">
+  <div class="header-left">
+    <div class="logo-box"><img data-logo src="" alt="Blanco Salud" style="height:52px;object-fit:contain;display:block;"></div>
+    <div style="display:flex;flex-direction:column;gap:3px;">
+      <h1 style="font-size:21px;font-weight:700;color:#fff;letter-spacing:-0.3px;margin:0;line-height:1.2;">Meta Ads — Blanco Salud</h1>
+      <p style="font-size:13px;color:rgba(255,255,255,0.72);margin:0;font-weight:400;letter-spacing:0.2px;">Campaña Resonancia Magnética — 1 al 17 Noviembre 2026</p>
+    </div>
+  </div>
+  <div class="header-right">
+    <div class="badge-period">1 – 17 Noviembre 2026</div>
+    <div class="badge-source">Fuente: Meta Ads</div>
+  </div>
+</header>
+<div style="max-width:1300px;margin:0 auto;padding:28px 32px;overflow-x:hidden;">
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:16px;margin-bottom:24px;"><div style="background:#fff;border-radius:12px;padding:20px;box-shadow:0 2px 12px rgba(0,0,0,.07);border-top:3px solid #1877F2;text-align:center;">
+    <div style="font-size:11px;font-weight:700;color:#888;text-transform:uppercase;letter-spacing:1px;margin-bottom:8px;">Inversión Total</div>
+    <div style="font-size:26px;font-weight:800;color:#1877F2;">$17.273</div>
+    <div style="font-size:11px;color:#888;margin-top:4px;">CLP</div>
+  </div><div style="background:#fff;border-radius:12px;padding:20px;box-shadow:0 2px 12px rgba(0,0,0,.07);border-top:3px solid #1B4F8A;text-align:center;">
+    <div style="font-size:11px;font-weight:700;color:#888;text-transform:uppercase;letter-spacing:1px;margin-bottom:8px;">Alcance</div>
+    <div style="font-size:26px;font-weight:800;color:#1B4F8A;">9.815</div>
+    <div style="font-size:11px;color:#888;margin-top:4px;">suma por anuncio</div>
+  </div><div style="background:#fff;border-radius:12px;padding:20px;box-shadow:0 2px 12px rgba(0,0,0,.07);border-top:3px solid #00B4D8;text-align:center;">
+    <div style="font-size:11px;font-weight:700;color:#888;text-transform:uppercase;letter-spacing:1px;margin-bottom:8px;">Impresiones</div>
+    <div style="font-size:26px;font-weight:800;color:#00B4D8;">13.481</div>
+    <div style="font-size:11px;color:#888;margin-top:4px;">total</div>
+  </div><div style="background:#fff;border-radius:12px;padding:20px;box-shadow:0 2px 12px rgba(0,0,0,.07);border-top:3px solid #2ECC71;text-align:center;">
+    <div style="font-size:11px;font-weight:700;color:#888;text-transform:uppercase;letter-spacing:1px;margin-bottom:8px;">Visitas a Landing</div>
+    <div style="font-size:26px;font-weight:800;color:#2ECC71;">863</div>
+    <div style="font-size:11px;color:#888;margin-top:4px;">visualizaciones landing</div>
+  </div><div style="background:#fff;border-radius:12px;padding:20px;box-shadow:0 2px 12px rgba(0,0,0,.07);border-top:3px solid #F39C12;text-align:center;">
+    <div style="font-size:11px;font-weight:700;color:#888;text-transform:uppercase;letter-spacing:1px;margin-bottom:8px;">Costo / Resultado</div>
+    <div style="font-size:26px;font-weight:800;color:#F39C12;">$20</div>
+    <div style="font-size:11px;color:#888;margin-top:4px;">CLP promedio</div>
+  </div></div>
+<div style="background:#fff;border-radius:12px;padding:24px;box-shadow:0 2px 12px rgba(0,0,0,.07);margin-bottom:24px;">
+  <h2 style="font-size:15px;font-weight:700;color:#1a1a2e;margin:0 0 18px;padding-left:10px;border-left:4px solid #1877F2;">Comparativo por anuncio</h2>
+  <div style="overflow-x:auto;">
+  <table style="width:100%;border-collapse:collapse;font-size:12.5px;">
+    <thead><tr><th style="text-align:left;">Anuncio</th><th style="text-align:right;">Inversión</th><th style="text-align:right;">Impresiones</th><th style="text-align:right;">Alcance</th>
+      <th style="text-align:right;">Visitas a Landing</th><th style="text-align:right;">Costo/Res.</th><th style="text-align:right;">Frecuencia</th><th style="text-align:right;">CPM</th></tr></thead>
+    <tbody><tr style="border-bottom:1px solid #f0f2f8;">
+  <td style="padding:10px 12px;font-size:12.5px;font-weight:700;">🖼️ Anuncio Resonancia Magnética 2<div style="font-size:11px;font-weight:400;color:#888;">Resonancia Magnética</div></td>
+  <td style="text-align:right;padding:10px 12px;font-size:12.5px;font-weight:700;">$CLP 10.136</td>
+  <td style="text-align:right;padding:10px 12px;font-size:12.5px;">10.017</td>
+  <td style="text-align:right;padding:10px 12px;font-size:12.5px;">6.772</td>
+  <td style="text-align:right;padding:10px 12px;font-size:12.5px;font-weight:700;">492</td>
+  <td style="text-align:right;padding:10px 12px;font-size:12.5px;">$21 CLP</td>
+  <td style="text-align:right;padding:10px 12px;font-size:12.5px;">1,48x</td>
+  <td style="text-align:right;padding:10px 12px;font-size:12.5px;">$1.012 CLP</td>
+</tr><tr style="border-bottom:1px solid #f0f2f8;">
+  <td style="padding:10px 12px;font-size:12.5px;font-weight:700;">🖼️ Anuncio Resonancia Magnética<div style="font-size:11px;font-weight:400;color:#888;">Resonancia Magnética</div></td>
+  <td style="text-align:right;padding:10px 12px;font-size:12.5px;font-weight:700;">$CLP 7.137</td>
+  <td style="text-align:right;padding:10px 12px;font-size:12.5px;">3.464</td>
+  <td style="text-align:right;padding:10px 12px;font-size:12.5px;">3.043</td>
+  <td style="text-align:right;padding:10px 12px;font-size:12.5px;font-weight:700;">371</td>
+  <td style="text-align:right;padding:10px 12px;font-size:12.5px;">$19 CLP</td>
+  <td style="text-align:right;padding:10px 12px;font-size:12.5px;">1,14x</td>
+  <td style="text-align:right;padding:10px 12px;font-size:12.5px;">$2.060 CLP</td>
+</tr></tbody>
+    <tfoot><tr style="background:#EEF3FC;border-top:2px solid #1877F2;">
+      <td style="padding:10px 12px;font-size:12.5px;font-weight:700;">Total</td>
+      <td style="text-align:right;padding:10px 12px;font-size:12.5px;font-weight:700;">$CLP 17.273</td>
+      <td style="text-align:right;padding:10px 12px;font-size:12.5px;font-weight:700;">13.481</td>
+      <td style="text-align:right;padding:10px 12px;font-size:12.5px;font-weight:700;">9.815</td>
+      <td style="text-align:right;padding:10px 12px;font-size:12.5px;font-weight:700;color:#1a8c4e;">863</td>
+      <td style="text-align:right;padding:10px 12px;font-size:12.5px;font-weight:700;">$20 CLP</td>
+      <td style="text-align:right;padding:10px 12px;font-size:12.5px;font-weight:700;">—</td>
+      <td style="text-align:right;padding:10px 12px;font-size:12.5px;font-weight:700;">$1.281 CLP</td>
+    </tr></tfoot>
+  </table></div>
+  <p style="font-size:11px;color:#888;margin:12px 0 0;">Alcance total = suma del alcance de cada anuncio (puede incluir personas repetidas entre anuncios). Resultado = visitas a la página de destino.</p>
+</div>
+<h2 style="font-size:15px;font-weight:700;color:#1a1a2e;margin:0 0 16px;padding-left:10px;border-left:4px solid #1877F2;">Detalle por anuncio</h2>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px;margin-bottom:24px;"><div style="background:#fff;border-radius:12px;box-shadow:0 2px 12px rgba(0,0,0,.07);overflow:hidden;display:flex;flex-direction:column;">
+  <div style="background:#1B4F8A;color:#fff;padding:10px 14px;display:flex;align-items:center;gap:8px;">
+    <span style="font-size:13px;font-weight:700;">🖼️ Anuncio Resonancia Magnética 2</span>
+    <span style="margin-left:auto;background:rgba(255,255,255,0.2);border-radius:8px;padding:2px 8px;font-size:10px;">activo</span>
+  </div>
+  
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));">
+    <div style="padding:8px 10px;border-bottom:1px solid #f4f6fa;"><div style="font-size:10px;font-weight:700;color:#999;text-transform:uppercase;letter-spacing:0.7px;">Inversión</div><div style="font-size:15px;font-weight:800;color:#1a1a2e;margin-top:2px;">$10.136 CLP</div></div><div style="padding:8px 10px;border-bottom:1px solid #f4f6fa;"><div style="font-size:10px;font-weight:700;color:#999;text-transform:uppercase;letter-spacing:0.7px;">Visitas a Landing</div><div style="font-size:15px;font-weight:800;color:#1a1a2e;margin-top:2px;">492</div></div>
+    <div style="padding:8px 10px;border-bottom:1px solid #f4f6fa;"><div style="font-size:10px;font-weight:700;color:#999;text-transform:uppercase;letter-spacing:0.7px;">Costo/Res.</div><div style="font-size:13px;font-weight:600;color:#444;margin-top:2px;">$21 CLP</div></div><div style="padding:8px 10px;border-bottom:1px solid #f4f6fa;"><div style="font-size:10px;font-weight:700;color:#999;text-transform:uppercase;letter-spacing:0.7px;">Alcance</div><div style="font-size:13px;font-weight:600;color:#444;margin-top:2px;">6.772</div></div>
+    <div style="padding:8px 10px;border-bottom:1px solid #f4f6fa;"><div style="font-size:10px;font-weight:700;color:#999;text-transform:uppercase;letter-spacing:0.7px;">Impresiones</div><div style="font-size:13px;font-weight:600;color:#444;margin-top:2px;">10.017</div></div><div style="padding:8px 10px;border-bottom:1px solid #f4f6fa;"><div style="font-size:10px;font-weight:700;color:#999;text-transform:uppercase;letter-spacing:0.7px;">Frecuencia</div><div style="font-size:13px;font-weight:600;color:#444;margin-top:2px;">1,48x</div></div>
+    <div style="padding:8px 10px;border-bottom:1px solid #f4f6fa;"><div style="font-size:10px;font-weight:700;color:#999;text-transform:uppercase;letter-spacing:0.7px;">CPM</div><div style="font-size:13px;font-weight:600;color:#444;margin-top:2px;">$1.012 CLP</div></div><div style="padding:8px 10px;border-bottom:1px solid #f4f6fa;"><div style="font-size:10px;font-weight:700;color:#999;text-transform:uppercase;letter-spacing:0.7px;">Campaña</div><div style="font-size:13px;font-weight:600;color:#444;margin-top:2px;">Resonancia Magnética</div></div>
+  </div>
+</div><div style="background:#fff;border-radius:12px;box-shadow:0 2px 12px rgba(0,0,0,.07);overflow:hidden;display:flex;flex-direction:column;">
+  <div style="background:#1B4F8A;color:#fff;padding:10px 14px;display:flex;align-items:center;gap:8px;">
+    <span style="font-size:13px;font-weight:700;">🖼️ Anuncio Resonancia Magnética</span>
+    <span style="margin-left:auto;background:rgba(255,255,255,0.2);border-radius:8px;padding:2px 8px;font-size:10px;">activo</span>
+  </div>
+  
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));">
+    <div style="padding:8px 10px;border-bottom:1px solid #f4f6fa;"><div style="font-size:10px;font-weight:700;color:#999;text-transform:uppercase;letter-spacing:0.7px;">Inversión</div><div style="font-size:15px;font-weight:800;color:#1a1a2e;margin-top:2px;">$7.137 CLP</div></div><div style="padding:8px 10px;border-bottom:1px solid #f4f6fa;"><div style="font-size:10px;font-weight:700;color:#999;text-transform:uppercase;letter-spacing:0.7px;">Visitas a Landing</div><div style="font-size:15px;font-weight:800;color:#1a1a2e;margin-top:2px;">371</div></div>
+    <div style="padding:8px 10px;border-bottom:1px solid #f4f6fa;"><div style="font-size:10px;font-weight:700;color:#999;text-transform:uppercase;letter-spacing:0.7px;">Costo/Res.</div><div style="font-size:13px;font-weight:600;color:#444;margin-top:2px;">$19 CLP</div></div><div style="padding:8px 10px;border-bottom:1px solid #f4f6fa;"><div style="font-size:10px;font-weight:700;color:#999;text-transform:uppercase;letter-spacing:0.7px;">Alcance</div><div style="font-size:13px;font-weight:600;color:#444;margin-top:2px;">3.043</div></div>
+    <div style="padding:8px 10px;border-bottom:1px solid #f4f6fa;"><div style="font-size:10px;font-weight:700;color:#999;text-transform:uppercase;letter-spacing:0.7px;">Impresiones</div><div style="font-size:13px;font-weight:600;color:#444;margin-top:2px;">3.464</div></div><div style="padding:8px 10px;border-bottom:1px solid #f4f6fa;"><div style="font-size:10px;font-weight:700;color:#999;text-transform:uppercase;letter-spacing:0.7px;">Frecuencia</div><div style="font-size:13px;font-weight:600;color:#444;margin-top:2px;">1,14x</div></div>
+    <div style="padding:8px 10px;border-bottom:1px solid #f4f6fa;"><div style="font-size:10px;font-weight:700;color:#999;text-transform:uppercase;letter-spacing:0.7px;">CPM</div><div style="font-size:13px;font-weight:600;color:#444;margin-top:2px;">$2.060 CLP</div></div><div style="padding:8px 10px;border-bottom:1px solid #f4f6fa;"><div style="font-size:10px;font-weight:700;color:#999;text-transform:uppercase;letter-spacing:0.7px;">Campaña</div><div style="font-size:13px;font-weight:600;color:#444;margin-top:2px;">Resonancia Magnética</div></div>
+  </div>
+</div></div>
+</div>
+<footer style="background:#0f2d5c;color:rgba(255,255,255,0.5);text-align:center;padding:16px;font-size:12px;">
+  Período: 1–17 Nov 2026 &nbsp;·&nbsp; Fuente: Meta Ads Manager &nbsp;·&nbsp; Blanco Salud
+</footer>
+</div>
+
+<script>
+// ══════════ Selector de mes (agregado nov 2026) ══════════
+const MONTH_INIT = {};
+const MONTH_CHARTS = {};
+let currentMonth = 'nov';
+let currentTab = 'imagenologia';
+const DAILY = {"oct": {"labels": ["1/10", "2/10", "3/10", "4/10", "5/10", "6/10", "7/10", "8/10", "9/10", "10/10", "11/10", "12/10", "13/10", "14/10", "15/10", "16/10", "17/10", "18/10", "19/10", "20/10", "21/10", "22/10", "23/10", "24/10", "25/10", "26/10", "27/10", "28/10", "29/10", "30/10", "31/10"], "b2b_cost": [16631, 21871, 19406, 20716, 32146, 22964, 23227, 25056, 15091, 12561, 13797, 20906, 24044, 29914, 25352, 31473, 22216, 30463, 56430, 40128, 36501, 35654, 30930, 18821, 17527, 46424, 32681, 32370, 40951, 41986, 12096], "b2b_cpc": [287, 437, 571, 592, 564, 425, 415, 385, 419, 393, 431, 523, 401, 379, 343, 350, 411, 462, 523, 431, 372, 410, 336, 336, 373, 411, 359, 352, 414, 472, 367], "b2c_cost": [39747, 37304, 31120, 32553, 40367, 37484, 36902, 37441, 28277, 31936, 52439, 56533, 57661, 70166, 62706, 79279, 109617, 117647, 204137, 189390, 246861, 205393, 164749, 123768, 170799, 238737, 197759, 182497, 37506, 31332, 26764], "b2c_cpc": [107, 100, 123, 132, 73, 75, 61, 58, 51, 72, 109, 102, 62, 70, 63, 80, 177, 179, 136, 153, 174, 153, 207, 272, 224, 211, 206, 247, 124, 107, 132]}, "nov": {"labels": ["1/11", "2/11", "3/11", "4/11", "5/11", "6/11", "7/11", "8/11", "9/11", "10/11", "11/11", "12/11", "13/11", "14/11", "15/11", "16/11", "17/11"], "b2b_cost": [7520, 6623, 6619, 8167, 7289, 5422, 4444, 5623, 9385, 7820, 7062, 6628, 45290, 42419, 43016, 66638, 50039], "b2b_cpc": [301, 237, 276, 215, 251, 226, 234, 268, 213, 261, 208, 189, 444, 581, 551, 551, 382], "b2c_cost": [23416, 29865, 36270, 41945, 36461, 34239, 26177, 28856, 49898, 38356, 40857, 39580, 30688, 34014, 32956, 57901, 83053], "b2c_cpc": [131, 85, 97, 99, 92, 108, 132, 134, 109, 86, 83, 79, 78, 106, 111, 85, 103]}};
+function _k(v){return v>=1000?(v/1000).toFixed(0)+'K':v}
+function renderImg(k, donut, bLabels, bData, steps, dev, rLabels, rData){
+  new Chart(document.getElementById('chartDonutTrafico-'+k), {type:'doughnut', data:{labels:['Orgánico','Directo','Pagado','Referral','Otros'], datasets:[{data:donut, backgroundColor:['#1B4F8A','#00B4D8','#F39C12','#8B5CF6','#95A5A6'], borderWidth:3, borderColor:'#fff', hoverOffset:8}]},
+    options:{cutout:'68%', plugins:{legend:{display:false}, tooltip:{callbacks:{label:ctx=>{const t=ctx.dataset.data.reduce((a,b)=>a+b,0);return ` ${ctx.parsed.toLocaleString('es-CL')} sesiones (${((ctx.parsed/t)*100).toFixed(1).replace('.',',')}%)`}}}}}});
+  new Chart(document.getElementById('chartBounceCanal-'+k), {type:'bar', data:{labels:bLabels, datasets:[{label:'Tasa de Rebote (%)', data:bData,
+    backgroundColor:ctx=>{const v=ctx.parsed.x; if(v>=60) return '#D9766E'; if(v>=47) return '#F39C12'; return '#2ECC71';}, borderRadius:4, borderSkipped:false}]},
+    options:{indexAxis:'y', plugins:{legend:{display:false}, tooltip:{callbacks:{label:ctx=>` ${ctx.parsed.x.toFixed(1).replace('.',',')}%`}}}, scales:{x:{max:100, ticks:{callback:v=>v+'%'}, grid:{color:'#E2E8F2'}}, y:{grid:{display:false}, ticks:{font:{size:11}}}}}});
+  const maxU = steps[0].users; const cont = document.getElementById('funnelContainer-'+k);
+  steps.forEach((s,i)=>{const p=Math.round(s.users/maxU*100); const prev=i>0?steps[i-1].users:null; const drop=prev?(((prev-s.users)/prev)*100).toFixed(1).replace('.',','):null;
+    const fin=s.id==='confirmacion_paso8'; const a=Math.round((1-i*0.055)*100)/100; const col=fin?'#2ECC71':`rgba(27,79,138,${a})`;
+    const row=document.createElement('div'); row.className='funnel-step';
+    row.innerHTML=`<div class="funnel-step-num ${fin?'final':''}">${i+1}</div><div class="funnel-step-info"><div class="funnel-step-name">${s.name}</div><div class="funnel-step-id">${s.id}</div></div><div class="funnel-bar-wrap"><div class="funnel-bar-bg"><div class="funnel-bar-fill" style="width:${p}%; background:${col};"></div></div></div><div class="funnel-value">${s.users.toLocaleString('es-CL')}</div><div class="funnel-drop ${drop?'drop-neg':'drop-start'}">${drop?`▼ ${drop}%`:'—'}</div>`;
+    cont.appendChild(row);});
+  new Chart(document.getElementById('chartFunnel-'+k), {type:'bar', data:{labels:steps.map((s,i)=>`Paso ${i+1}`), datasets:[{label:'Usuarios', data:steps.map(s=>s.users),
+    backgroundColor:steps.map((s,i)=>s.id==='confirmacion_paso8'?'#2ECC71':`rgba(27, 79, 138, ${1-(i*0.07)})`), borderRadius:6, borderSkipped:false}]},
+    options:{plugins:{legend:{display:false}, tooltip:{callbacks:{title:ctx=>steps[ctx[0].dataIndex].name, label:ctx=>` ${ctx.parsed.y.toLocaleString('es-CL')} usuarios`}}}, scales:{x:{grid:{display:false}, ticks:{font:{size:11}}}, y:{grid:{color:'#E2E8F2'}, ticks:{callback:v=>v.toLocaleString('es-CL')}}}}});
+  new Chart(document.getElementById('chartDevices-'+k), {type:'doughnut', data:{labels:['Móvil','Escritorio','Tablet'], datasets:[{data:dev, backgroundColor:['#1B4F8A','#00B4D8','#95A5A6'], borderWidth:3, borderColor:'#fff', hoverOffset:8}]},
+    options:{cutout:'65%', plugins:{legend:{display:false}, tooltip:{callbacks:{label:ctx=>` ${ctx.parsed.toFixed(1).replace('.',',')}%`}}}}});
+  new Chart(document.getElementById('chartRegiones-'+k), {type:'bar', data:{labels:rLabels, datasets:[{label:'Usuarios activos', data:rData, backgroundColor:['#1B4F8A','#00B4D8','#2ECC71','#F39C12','#8B5CF6','#E74C3C'], borderRadius:6, borderSkipped:false}]},
+    options:{indexAxis:'y', plugins:{legend:{display:false}, tooltip:{callbacks:{label:ctx=>` ${ctx.parsed.x.toLocaleString('es-CL')} usuarios`}}}, scales:{x:{grid:{color:'#E2E8F2'}, ticks:{callback:_k}}, y:{grid:{display:false}, ticks:{font:{size:12}}}}}});
+}
+function renderOcup(k, canal, pLabels, pData, gLabels, gData, dev){
+  new Chart(document.getElementById('chartCanalOcup-'+k), {type:'doughnut', data:{labels:['Paid Search','Directo','Display','Cross-network','Orgánico','Otros'], datasets:[{data:canal, backgroundColor:['#1B4F8A','#00B4D8','#F39C12','#9B59B6','#2ECC71','#BDC3C7'], borderWidth:2, borderColor:'#fff'}]},
+    options:{responsive:true, plugins:{legend:{position:'right', labels:{font:{size:11}, padding:10}}}}});
+  const pc = pLabels.map(l=>l==='Agendar Evaluación'?'#00B4D8':(l==='Gracias'?'#2ECC71':'#1B4F8A'));
+  new Chart(document.getElementById('chartPaginasOcup-'+k), {type:'bar', data:{labels:pLabels, datasets:[{label:'Vistas', data:pData, backgroundColor:pc, borderRadius:4}]},
+    options:{indexAxis:'y', responsive:true, plugins:{legend:{display:false}}, scales:{x:{grid:{color:'#f0f2f8'}}, y:{ticks:{font:{size:10}}}}}});
+  new Chart(document.getElementById('chartGeoOcup-'+k), {type:'bar', data:{labels:gLabels, datasets:[{label:'Usuarios', data:gData, backgroundColor:'#9B59B6', borderRadius:4}]},
+    options:{indexAxis:'y', responsive:true, plugins:{legend:{display:false}}, scales:{x:{grid:{color:'#f0f2f8'}}, y:{ticks:{font:{size:11}}}}}});
+  new Chart(document.getElementById('chartBrowserOcup-'+k), {type:'doughnut', data:{labels:['Mobile','Desktop','Tablet'], datasets:[{data:dev, backgroundColor:['#1B4F8A','#00B4D8','#F39C12'], borderWidth:2, borderColor:'#fff'}]},
+    options:{responsive:true, plugins:{legend:{position:'right', labels:{font:{size:12}, padding:14}}}}});
+}
+function renderGads(k, seg, labels, cost, cpc){
+  const opts = {responsive:true, interaction:{mode:'index', intersect:false},
+    plugins:{legend:{position:'top', labels:{font:{size:11}, padding:12}}, tooltip:{callbacks:{label:ctx=>ctx.dataset.label+': $'+ctx.parsed.y.toLocaleString('es-CL')+' CLP'}}},
+    scales:{ySpend:{type:'linear', position:'left', ticks:{callback:v=>'$'+(v/1000).toFixed(0)+'k', font:{size:11}}, grid:{color:'#f0f2f8'}},
+            yCPC:{type:'linear', position:'right', ticks:{callback:v=>'$'+v, font:{size:11}}, grid:{display:false}}}};
+  MONTH_CHARTS[seg+'|'+k] = new Chart(document.getElementById('chartGadsTimeline'+seg+'-'+k), {data:{labels:[...labels], datasets:[
+    {type:'bar', label:'Gasto diario '+seg+' (CLP)', data:[...cost], backgroundColor:'rgba(27,79,138,0.7)', borderRadius:3, yAxisID:'ySpend'},
+    {type:'line', label:'CPC (CLP)', data:[...cpc], borderColor:'#F39C12', backgroundColor:'rgba(243,156,18,0.1)', borderWidth:2, pointRadius:3, tension:0.3, yAxisID:'yCPC'}]}, options:opts});
+}
+function applyDateFilterM(k){
+  const sv=document.getElementById('dateStart-'+k).value, ev=document.getElementById('dateEnd-'+k).value;
+  if(!sv||!ev) return; const s=parseInt(sv.split('-')[2])-1, e=parseInt(ev.split('-')[2]); const D=DAILY[k];
+  if(s<0||e>D.labels.length||s>=e) return;
+  [['B2B','b2b'],['B2C','b2c']].forEach(([S,s2])=>{const c=MONTH_CHARTS[S+'|'+k]; if(!c) return;
+    c.data.labels=D.labels.slice(s,e); c.data.datasets[0].data=D[s2+'_cost'].slice(s,e); c.data.datasets[1].data=D[s2+'_cpc'].slice(s,e); c.update();});
+}
+MONTH_INIT['imagenologia|oct'] = function() {
+  renderImg('oct', [49173, 12308, 20252, 1221, 2762],
+    ["Display", "Unassigned", "Direct", "Organic Social", "Referral", "AI Assistant", "Email", "Organic Search", "Paid Search", "Cross-network"], [77.8, 53.4, 52.1, 50.5, 47.1, 41.0, 40.9, 35.2, 31.1, 2.2],
+    [{"id": "examen_paso2", "name": "Selección de examen", "users": 4965}, {"id": "sucursal_paso3", "name": "Selección de sucursal", "users": 4483}, {"id": "fecha_paso4", "name": "Selección de fecha", "users": 3195}, {"id": "horario_paso5", "name": "Selección de horario", "users": 3088}, {"id": "RUT_paso6", "name": "Ingreso de RUT", "users": 2869}, {"id": "datospaciente_paso7", "name": "Datos del paciente", "users": 2751}, {"id": "confirmacion_paso8", "name": "Confirmación", "users": 2321}, {"id": "aceptar_paso9", "name": "Hora agendada ✓", "users": 2083}],
+    [65.6, 33.7, 0.7],
+    ["Reg. Metropolitana", "Antofagasta", "Valparaíso", "Biobío", "Araucanía", "O'Higgins"], [40251, 3688, 1825, 1562, 874, 290]);
+};
+MONTH_INIT['ocupacional|oct'] = function() {
+  renderOcup('oct', [1485, 106, 194, 15, 75, 57],
+    ["Exámenes Ocup.", "Inicio", "Agendar Evaluación", "Evaluaciones Psico.", "Exámenes Laborales", "Contacto", "Gracias"], [1299, 800, 200, 199, 146, 134, 47],
+    ["R. Metropolitana", "Valparaíso", "Bío Bío", "Antofagasta", "O'Higgins", "Otras regiones"], [1301, 59, 57, 40, 25, 132],
+    [1357, 242, 17]);
+};
+MONTH_INIT['googleads-b2b|oct'] = function() {
+  renderGads('oct', 'B2B', ["1/10", "2/10", "3/10", "4/10", "5/10", "6/10", "7/10", "8/10", "9/10", "10/10", "11/10", "12/10", "13/10", "14/10", "15/10", "16/10", "17/10", "18/10", "19/10", "20/10", "21/10", "22/10", "23/10", "24/10", "25/10", "26/10", "27/10", "28/10", "29/10", "30/10", "31/10"], [16631, 21871, 19406, 20716, 32146, 22964, 23227, 25056, 15091, 12561, 13797, 20906, 24044, 29914, 25352, 31473, 22216, 30463, 56430, 40128, 36501, 35654, 30930, 18821, 17527, 46424, 32681, 32370, 40951, 41986, 12096], [287, 437, 571, 592, 564, 425, 415, 385, 419, 393, 431, 523, 401, 379, 343, 350, 411, 462, 523, 431, 372, 410, 336, 336, 373, 411, 359, 352, 414, 472, 367]);
+};
+MONTH_INIT['googleads-b2c|oct'] = function() {
+  renderGads('oct', 'B2C', ["1/10", "2/10", "3/10", "4/10", "5/10", "6/10", "7/10", "8/10", "9/10", "10/10", "11/10", "12/10", "13/10", "14/10", "15/10", "16/10", "17/10", "18/10", "19/10", "20/10", "21/10", "22/10", "23/10", "24/10", "25/10", "26/10", "27/10", "28/10", "29/10", "30/10", "31/10"], [39747, 37304, 31120, 32553, 40367, 37484, 36902, 37441, 28277, 31936, 52439, 56533, 57661, 70166, 62706, 79279, 109617, 117647, 204137, 189390, 246861, 205393, 164749, 123768, 170799, 238737, 197759, 182497, 37506, 31332, 26764], [107, 100, 123, 132, 73, 75, 61, 58, 51, 72, 109, 102, 62, 70, 63, 80, 177, 179, 136, 153, 174, 153, 207, 272, 224, 211, 206, 247, 124, 107, 132]);
+};
+MONTH_INIT['imagenologia|nov'] = function() {
+  renderImg('nov', [35349, 8222, 6347, 755, 869],
+    ["Display", "Unassigned", "Direct", "Referral", "Organic Social", "Email", "AI Assistant", "Organic Search", "Paid Search", "Cross-network"], [80, 65.2, 55.2, 49.7, 48.4, 45.0, 37.2, 35.7, 28.8, 0],
+    [{"id": "examen_paso2", "name": "Selección de examen", "users": 3248}, {"id": "sucursal_paso3", "name": "Selección de sucursal", "users": 2988}, {"id": "fecha_paso4", "name": "Selección de fecha", "users": 2178}, {"id": "horario_paso5", "name": "Selección de horario", "users": 2052}, {"id": "RUT_paso6", "name": "Ingreso de RUT", "users": 1926}, {"id": "datospaciente_paso7", "name": "Datos del paciente", "users": 1837}, {"id": "confirmacion_paso8", "name": "Confirmación", "users": 1596}, {"id": "aceptar_paso9", "name": "Hora agendada ✓", "users": 1419}],
+    [60.2, 38.2, 0.6],
+    ["Reg. Metropolitana", "Antofagasta", "Valparaíso", "Biobío", "Araucanía", "O'Higgins"], [24162, 2639, 976, 885, 547, 110]);
+};
+MONTH_INIT['ocupacional|nov'] = function() {
+  renderOcup('nov', [583, 30, 128, 9, 28, 35],
+    ["Exámenes Ocup.", "Inicio", "Evaluaciones Psico.", "Agendar Evaluación", "Exámenes Laborales", "Contacto", "Gracias"], [466, 385, 126, 83, 49, 38, 19],
+    ["R. Metropolitana", "Valparaíso", "Bío Bío", "Antofagasta", "O'Higgins", "Otras regiones"], [551, 30, 23, 18, 13, 43],
+    [588, 84, 6]);
+};
+MONTH_INIT['googleads-b2b|nov'] = function() {
+  renderGads('nov', 'B2B', ["1/11", "2/11", "3/11", "4/11", "5/11", "6/11", "7/11", "8/11", "9/11", "10/11", "11/11", "12/11", "13/11", "14/11", "15/11", "16/11", "17/11"], [7520, 6623, 6619, 8167, 7289, 5422, 4444, 5623, 9385, 7820, 7062, 6628, 45290, 42419, 43016, 66638, 50039], [301, 237, 276, 215, 251, 226, 234, 268, 213, 261, 208, 189, 444, 581, 551, 551, 382]);
+};
+MONTH_INIT['googleads-b2c|nov'] = function() {
+  renderGads('nov', 'B2C', ["1/11", "2/11", "3/11", "4/11", "5/11", "6/11", "7/11", "8/11", "9/11", "10/11", "11/11", "12/11", "13/11", "14/11", "15/11", "16/11", "17/11"], [23416, 29865, 36270, 41945, 36461, 34239, 26177, 28856, 49898, 38356, 40857, 39580, 30688, 34014, 32956, 57901, 83053], [131, 85, 97, 99, 92, 108, 132, 134, 109, 86, 83, 79, 78, 106, 111, 85, 103]);
+};
+function pageIdFor(name, month){
+  if(name==='googleads-agosto' || month==='sep') return 'page-'+name;
+  return 'page-'+name+'-'+month;
+}
+function showPage(name){
+  currentTab = name;
+  window.scrollTo(0,0);
+  document.querySelectorAll('[id^="page-"]').forEach(p=>p.style.display='none');
+  const id = pageIdFor(name, currentMonth);
+  document.getElementById(id).style.display='block';
+  ['imagenologia','ocupacional','googleads-b2b','googleads-b2c','googleads-agosto','meta'].forEach(p=>{
+    const tab=document.getElementById('tab-'+p);
+    tab.style.color=(p===name)?'#fff':'rgba(255,255,255,0.6)';
+    tab.style.borderBottomColor=(p===name)?'#00B4D8':'transparent';
+    tab.style.background=(p===name)?'rgba(255,255,255,0.08)':'transparent';
+  });
+  if(name==='googleads-agosto') return;
+  if(currentMonth==='sep'){
+    if((name==='googleads-b2b'||name==='googleads-b2c') && !window._gadsChartsDone){window._gadsChartsDone=true; initGadsCharts();}
+    if(name==='ocupacional' && !window._ocupChartsDone){window._ocupChartsDone=true; initOcupCharts();}
+    return;
+  }
+  const key = name+'|'+currentMonth;
+  const segs = [name];
+  segs.forEach(sname=>{const kk=sname+'|'+currentMonth; if(MONTH_INIT[kk]){const f=MONTH_INIT[kk]; delete MONTH_INIT[kk]; f();}});
+}
+function setMonth(m){
+  currentMonth = m;
+  try{ localStorage.setItem('bsMonth', m); }catch(e){}
+  showPage(currentTab);
+}
+document.querySelectorAll('img[data-metaimg]').forEach(i=>{const o=document.querySelector('img[alt="'+i.dataset.metaimg+'"]:not([data-metaimg])'); if(o) i.src=o.src;});
+document.querySelectorAll('img[data-logo]').forEach(i=>{i.src=document.querySelector('.logo-box img:not([data-logo])').src;});
+(function(){
+  let m = 'nov';
+  try{ const s = localStorage.getItem('bsMonth'); if(s && ['sep','oct','nov'].includes(s)) m = s; }catch(e){}
+  currentMonth = m;
+  const sel = document.getElementById('globalMonth'); if(sel) sel.value = m;
+  showPage('imagenologia');
+})();
+</script>
 
 </body>
 </html>
